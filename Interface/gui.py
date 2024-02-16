@@ -34,7 +34,7 @@ image_image_1 = PhotoImage(
     file=relative_to_assets("image_1.png"))
 image_1 = canvas.create_image(
     604.4124145507812,
-    62.13761901855469,
+    56.13761901855469,
     image=image_image_1
 )
 
@@ -157,7 +157,7 @@ image_image_9 = PhotoImage(
     file=relative_to_assets("image_9.png"))
 image_9 = canvas.create_image(
     660.0,
-    295.0,
+    300.0,
     image=image_image_9
 )
 window.resizable(False, False)
