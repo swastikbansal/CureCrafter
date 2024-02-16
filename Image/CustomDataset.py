@@ -47,7 +47,7 @@ class CustomDataset(Dataset):
         img_name = os.path.join(self.root_dir, f"{self.data['Image Index'][idx]}")
         # image = Image.open(img_name).convert("RGB")
         image = Image.open(img_name)
-
+        
         labels = torch.tensor(self.data.loc[idx, self.classes].values.astype(float))
         # print(labels)
         
