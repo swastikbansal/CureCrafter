@@ -2,7 +2,7 @@ from pathlib import Path
 
 # from tkinter import *
 # Explicit imports to satisfy Flake8
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, Scrollbar
 
 
 OUTPUT_PATH = Path(__file__).parent
@@ -34,7 +34,7 @@ image_image_1 = PhotoImage(
     file=relative_to_assets("image_1.png"))
 image_1 = canvas.create_image(
     604.4124145507812,
-    62.13761901855469,
+    56.13761901855469,
     image=image_image_1
 )
 
@@ -65,13 +65,13 @@ entry_1 = Entry(
     bg="#2F3235",
     fg="#FFFFFF",  # Set text color to white
     highlightthickness=0,
-    font=("Magra", 24)  # Increase font size to 24
+    font=("Magra", 20)  # Increase font size to 24
 )
 entry_1.place(
-    x=209.0,
-    y=567.0,
-    width=648.0,
-    height=104.0
+    x=210.0,
+    y=570.0,
+    width=645.0,
+    height=100.0
 )
 
 image_image_3 = PhotoImage(
@@ -157,7 +157,7 @@ image_image_9 = PhotoImage(
     file=relative_to_assets("image_9.png"))
 image_9 = canvas.create_image(
     660.0,
-    295.0,
+    300.0,
     image=image_image_9
 )
 window.resizable(False, False)
