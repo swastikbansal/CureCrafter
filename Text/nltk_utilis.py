@@ -1,5 +1,7 @@
+
 import numpy
 import nltk
+nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 
@@ -16,4 +18,9 @@ def bag_of_words(tokenized_sentence, words):
         if w in tokenized_sentence:
             bag[idx] = 1.0
     return bag
-
+'''
+sentence='my head is paining with knee joints are also acking.'
+print(tokenize(sentence))
+for word in tokenize(sentence):
+    print(stem(word))
+'''
