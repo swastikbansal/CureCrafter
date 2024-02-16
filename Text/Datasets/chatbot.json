@@ -3,8 +3,8 @@
      {  
          "tag":"symptom",
             "patterns": [
-                "skin_ras",
                 "itching",
+                "skin_rash",
                 "nodal_skin_eruptions",
                 "continuous_sneezing",
                 "shivering",
@@ -136,7 +136,253 @@
                 "red_sore_around_nose",
                 "yellow_crust_ooze"
             ]
-        }
+        },
+        {
+        "tag":"(vertigo) Paroymsal  Positional Vertigo",
+        "Responce":[
+
+                ]
+        },
+        {
+        "tag":"Acne",
+        "Responce":[
+            
+                ]
+       },
+       {
+        "tag":"AIDS",
+        "Responce":[
+            
+                ]
+       },
+       {
+        "tag":"Alcoholic hepatitis",
+        "Responce":[
+            
+                ]
+       },
+    {
+          "tag":"Allergy",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Arthritis",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Bronchial Asthma",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Cervical spondylosis",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Chicken pox",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Chronic cholestasis",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Common Cold",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Dengue",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Diabetes ",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Dimorphic hemmorhoids(piles)",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Drug Reaction",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Fungal infection",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"GERD",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Gastroenteritis",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Heart attack",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"hepatitis A",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Hepatitis B",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Hepatitis C",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Hepatitis D",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Hepatitis E",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Hypertension ",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Hyperthyroidism",
+          "Responce":[
+                
+                 ]
+         },
+         {
+          "tag":"Hypoglycemia",
+          "Responce":[
+                
+                 ]
+            },
+            {
+             "tag":"Hypothyroidism",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Impetigo",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Jaundice",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Malaria",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Migraine",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Osteoarthristis",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Paralysis (brain hemorrhage)",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Peptic ulcer diseae",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Pneumonia",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Psoriasis",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Tuberculosis",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Typhoid",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Urinary tract infection",
+             "Responce":[
+            
+                ]
+          },
+          {
+             "tag":"Varicose veins",
+             "Responce":[
+            
+                ]
+            }
     ]
     
 }
