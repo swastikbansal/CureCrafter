@@ -6,6 +6,21 @@ __pycache__/
 # C extensions
 *.so
 
+#Files
+Image/Dataset
+# Image/Dataset/Image/images_001
+# Image/Dataset/Image/images_002
+# Image/Dataset/Image/images_003
+# Image/Dataset/Image/images_004
+# Image/Dataset/Image/images_005
+# Image/Dataset/Image/images_006
+# Image/Dataset/Image/images_007
+# Image/Dataset/Image/images_008
+# Image/Dataset/Image/images_009
+# Image/Dataset/Image/images_010
+# Image/Dataset/Image/images_011
+# Image/Dataset/Image/images_012
+
 # Distribution / packaging
 .Python
 build/
