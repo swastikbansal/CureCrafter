@@ -1,5 +1,18 @@
 from pathlib import Path
-from tkinter import Tk, Canvas, Entry, Button, PhotoImage,ttk, Text, DISABLED, END, Scrollbar, RIGHT,Y
+from tkinter import (
+    Tk,
+    Canvas,
+    Entry,
+    Button,
+    PhotoImage,
+    ttk,
+    Text,
+    DISABLED,
+    END,
+    Scrollbar,
+    RIGHT,
+    Y,
+)
 from tkinter import *
 import tkinter as tk
 
@@ -19,15 +32,12 @@ class GUI:
             width=1200,
             bd=0,
             highlightthickness=0,
-            relief="ridge"
+            relief="ridge",
         )
         self.canvas.place(x=0, y=0)
         self.create_images_and_buttons()
         self.window.resizable(False, False)
         self.window.mainloop()
-    
-        
-            
 
     @staticmethod
     def relative_to_assets(path: str) -> Path:
@@ -45,7 +55,9 @@ class GUI:
             bd=0,
             highlightthickness=0,
             bg="#202225",
-            command=lambda: self._on_enter_pressed(None)  # Replace "your_command_function" with the actual command function
+            command=lambda: self._on_enter_pressed(
+                None
+            ),  # Replace "your_command_function" with the actual command function
         )
         button.place(x=x, y=y)
         return image, button
@@ -54,11 +66,7 @@ class GUI:
         image = PhotoImage(file=self.relative_to_assets(image_path))
         entry_bg = self.canvas.create_image(x + width / 2, y + height / 2, image=image)
         entry = Entry(
-            bd=0,
-            bg="#2F3235",
-            fg="#FFFFFF",
-            highlightthickness=0,
-            font=("Magra", 20)
+            bd=0, bg="#2F3235", fg="#FFFFFF", highlightthickness=0, font=("Magra", 20)
         )
         entry.place(x=x, y=y, width=width, height=height)
         entry.focus()
@@ -66,62 +74,70 @@ class GUI:
         return image, entry
 
     def create_images_and_buttons(self):
-        
-        self.image_1 = self.create_image("image_1.png", 604.4124145507812, 56.13761901855469)
-        
-        self.text_widget = Text(self.window, width=0, height=0, bg= "#202225" , fg="#FFFFFF", 
-                                    font=("Helvetica", 16), bd=0, highlightthickness=0)
-        self.text_widget.place(height=450, width=1070, rely=0.08 , x=140, y=60 )
+
+        self.image_1 = self.create_image(
+            "image_1.png", 604.4124145507812, 56.13761901855469
+        )
+
+        self.text_widget = Text(
+            self.window,
+            width=0,
+            height=0,
+            bg="#202225",
+            fg="#FFFFFF",
+            font=("Helvetica", 16),
+            bd=0,
+            highlightthickness=0,
+        )
+        self.text_widget.place(height=450, width=1070, rely=0.08, x=140, y=60)
         self.text_widget.configure(cursor="arrow", state=DISABLED)
-        
+
         # scroll bar
-        scrollbar = ttk.Scrollbar(self.text_widget)
+        scrollbar = Scrollbar(self.text_widget)
         scrollbar.place(relheight=1, relx=0.974)
         scrollbar.configure(command=self.text_widget.yview)
-        style = ttk.Style()
-        style.theme_use('vista')
-        
+
         self.image_2, self.button_2 = self.create_button("image_4.png", 1010.0, 600.0)
-        self.image_3, self.entry_1 = self.create_entry("entry_1.png", 210.0, 570.0, 645.0, 100.0)
+        self.image_3, self.entry_1 = self.create_entry(
+            "entry_1.png", 210.0, 570.0, 645.0, 100.0
+        )
         self.image_4, self.button_3 = self.create_button("image_3.png", 1075.0, 570.0)
-        
+
         self.image_5 = self.create_image("image_2.png", 60.0, 350.0)
         self.image_6, self.button_4 = self.create_button("image_5.png", 930.0, 590.0)
         self.image_7 = self.create_image("image_6.png", 60.0, 49.0)
         self.image_8 = self.create_image("image_7.png", 59.0, 152.0)
-        
+
         self.image_9 = self.create_image("image_8.png", 59.0, 647.0)
-        
 
         self.image_10 = self.create_image("image_9.png", 650.0, 300.0)
-        
-        self.text_widget.image_create(tk.END, image=self.image_10, padx=25, pady=25) 
+
+        self.text_widget.image_create(tk.END, image=self.image_10, padx=25, pady=25)
 
     def _on_enter_pressed(self, event):
         msg = self.entry_1.get()
         self._insert_message(msg, "User")
-        
+
     def _insert_message(self, msg, sender):
         if not msg:
             return
-        
+
         self.entry_1.delete(0, END)
         msg1 = f"{sender}: {msg}\n\n"
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg1)
         self.text_widget.configure(state=DISABLED)
-        
+
         # msg2 = f"{bot_name}: {get_response(msg)}\n\n"
-        
+
         self.text_widget.configure(state=NORMAL)
-        
+
         # self.text_widget.insert(END, msg2)
-        
+
         self.text_widget.configure(state=DISABLED)
-        
+
         self.text_widget.see(END)
-        
-        
+
 
 if __name__ == "__main__":
     gui = GUI()
