@@ -1,0 +1,577 @@
+{
+    "intents":[
+        {
+            "tags":"itching",
+            "patterns": ["itchy", "pruritus", "scratchy"]
+        },
+        {
+            "tags":"skin_rash",
+            "patterns": ["rash", "dermatitis", "skin irritation"]
+
+        },
+        { 
+            "tags":"nodal_skin_eruptions",
+            "patterns":["skin eruptions", "nodal eruptions", "nodules on skin"]
+        },
+        {
+            "tags":"continuous_sneezing",
+            "patterns": ["sneezing", "constant sneezing", "non-stop sneezing"]
+        },
+        {
+            "tags":"shivering" ,
+            "patterns":  ["shiver", "trembling", "shaking"]
+        },
+        {
+            "tags": "chills" ,
+            "patterns": ["chilly", "shivering with cold", "cold shivers"]
+        },
+        {
+            "tags":"joint_pain",
+            "patterns":["joint ache", "arthralgia", "pain in joints"]
+        },
+        {
+            "tags":"stomach_pain",
+            "patterns": ["abdominal pain", "belly ache", "stomach ache"]
+        },
+        {
+            "tags":"acidity",
+            "patterns": ["acid reflux", "heartburn", "sour stomach"]
+        },
+        {
+            "tags":"ulcers_on_tongue",
+            "patterns": ["tongue ulcers", "mouth ulcers", "oral sores"]
+        },
+        {
+            "tags":"muscle_wasting",
+            "patterns": ["muscle loss", "muscle atrophy", "muscle degeneration"]
+        },
+        {
+            "tags":"sweating",
+            "patterns": ["perspiration", "sweatiness", "diaphoresis"]
+        },
+        {
+            "tags":"dehydration",
+            "patterns": ["excessive thirst", "fluid depletion", "hypohydration"]
+        },
+        {
+            "tags":"indigestion",
+            "patterns": ["dyspepsia", "upset stomach", "gastric discomfort"]
+        },
+        {
+            "tags":"headache",
+            "patterns":["cephalalgia", "head pain", "migraine"]
+        },
+        {
+            "tags":"yellowish_skin",
+            "patterns":["jaundice", "icterus", "yellow skin"] 
+        },
+        {
+            "tags": "dark_urine",
+            "patterns":["concentrated urine", "brown urine", "discolored urine"]
+        },
+        {
+            "tags":"nausea",
+            "patterns": ["queasiness", "upset stomach", "vomiting sensation"]
+        },
+        {
+            "tags":"loss_of_appetite",
+            "patterns": ["anorexia", "lack of appetite", "decreased hunger"] 
+        },
+        {
+            "tags":"pain_behind_the_eyes",
+            "patterns":["ocular pain", "eye discomfort", "retro-orbital pain"] 
+        },
+        {
+            "tags":"back_pain",
+            "patterns": ["dorsalgia", "spinal discomfort", "lower backache"]
+        },
+        {
+            "tags":"constipation",
+            "patterns": ["bowel obstruction", "difficulty passing stool", "irregular bowel movements"]
+
+        },
+        {
+            "tags": "abdominal_pain",
+            "patterns": ["stomachache", "belly pain", "abdominal discomfort"]
+        },
+        {
+            "tags":"diarrhoea",
+            "patterns":["loose stools", "bowel urgency", "frequent bowel movements" ]
+        },
+        {
+            "tags":"mild_fever",
+            "patterns": ["low-grade fever", "slight temperature elevation", "febrile"]
+        },
+        {
+            "tags": "yellow_urine",
+            "patterns": ["amber urine", "gold-colored urine", "dark yellow urine"]
+        },
+        {
+            "tags":"yellowing_of_eyes",
+            "patterns":["icterus of sclera", "yellowed sclera", "eye jaundice"]
+        },
+        {
+            "tags":"acute_liver_failure",
+            "patterns":["fulminant hepatic failure", "rapid liver breakdown", "liver collapse"] 
+        },
+        {
+            "tags":"fluid_overload",
+            "patterns": ["hypervolemia", "excessive fluid retention", "fluid congestion"]
+        },
+        {
+            "tags":"swelling_of_stomach",
+            "patterns": ["abdominal distension", "bloating", "stomach swelling"]
+        },
+        {
+            "tags":"swelled_lymph_nodes",
+            "patterns":["enlarged lymph nodes", "lymphadenopathy", "lymph gland swelling"]
+        },
+        {
+            "tags": "malaise",
+            "patterns": ["general discomfort", "feeling unwell", "lack of well-being"]
+        },
+        {
+            "tags":"blurred_and_distorted_vision",
+            "patterns":["vision impairment", "visual distortion", "fuzzy sight"] 
+        },
+        {
+            "tags":"phlegm",
+            "patterns": ["mucus", "sputum", "respiratory secretion"] 
+        },
+        {
+            "tags": "throat_irritation",
+            "patterns": ["sore throat", "pharyngeal discomfort", "throat itchiness"]
+        },
+        {
+            "tags":"redness_of_eyes",
+            "patterns":["conjunctival redness", "bloodshot eyes", "eye inflammation"] 
+        },
+        {
+            "tags":"sinus_pressure",
+            "patterns":["sinus congestion", "nasal pressure", "sinus discomfort"]
+        },
+        {
+            "tags": "runny_nose",
+            "patterns": ["nasal discharge", "rhinorrhea", "drippy nose"]
+        },
+        {
+            "tags":"congestion",
+            "patterns": ["nasal congestion", "blockage", "stuffiness"]
+        },
+        {
+            "tags": "chest_pain",
+            "patterns": ["sternalgia", "thoracic discomfort", "heartache"]
+        },
+        {
+            "tags": "weakness_in_limbs",
+            "patterns":["limb fatigue", "muscle weakness", "limb lethargy"] 
+        },
+        {
+            "tags":"fast_heart_rate",
+            "patterns":["tachycardia", "rapid heartbeat", "elevated heart rate"] 
+        },
+        {
+            "tags":"pain_during_bowel_movements",
+            "patterns": ["dyschezia", "discomfort during defecation", "bowel movement pain"]
+        },
+        {
+            "tags":"pain_in_anal_region",
+            "patterns": ["perianal pain", "rectal discomfort", "anal soreness"]
+        },
+        {
+            "tags":"bloody_stool",
+            "patterns": ["hematochezia", "blood in stool", "rectal bleeding"]
+        },
+        {
+            "tags":"irritation_in_anus",
+            "patterns": ["anal discomfort", "rectal irritation", "anus itchiness"]
+        },
+        {
+            "tags":"neck_pain",
+            "patterns":  ["cervicalgia", "neck discomfort", "cervical pain"]
+        },
+        {
+            "tags":"dizziness",
+            "patterns":["vertigo", "lightheadedness", "spinning sensation"] 
+        },
+        {
+            "tags":"cramps",
+            "patterns": ["muscle spasms", "abdominal cramping", "painful muscle contractions"]
+        },
+        {
+            "tags": "bruising",
+            "patterns": ["ecchymosis", "contusion", "skin discoloration"]
+        },
+        {
+            "tags":"obesity",
+            "patterns":  ["overweight", "excessive adiposity", "morbid obesity"]
+        },
+        {
+            "tags":"swollen_legs",
+            "patterns":["lower limb edema", "leg swelling", "puffy legs"] 
+        },
+        {
+            "tags":"swollen_blood_vessels",
+            "patterns": ["vascular swelling", "engorged vessels", "dilated veins"]
+        },
+        {
+            "tags":"puffy_face_and_eyes",
+            "patterns":["facial edema", "swollen face and eyes", "periorbital puffiness" ]
+        },
+        {
+            "tags":"enlarged_thyroid",
+            "patterns":["thyroid enlargement", "goiter", "thyromegaly" ]
+        },
+        {
+            "tags":"brittle_nails",
+            "patterns": ["fragile nails", "weak nails", "easily broken nails"] 
+        },
+        {
+            "tags":"swollen_extremeties",
+            "patterns": ["edematous extremities", "puffy limbs", "swollen limbs"]
+        },
+        {
+            "tags":"excessive_hunger",
+            "patterns":["polyphagia", "uncontrolled appetite", "ravenous hunger"] 
+        },
+        {
+            "tags": "extra_marital_contacts",
+            "patterns": ["extramarital affairs", "infidelity", "outside relationships"]
+        }, 
+        {
+            "tags":"knee_pain",
+            "patterns": ["painful knees", "knee discomfort", "aching knees"]
+        },
+        {
+            "tags":"slurred_speech",
+            "patterns": ["impaired speech", "unclear speech", "mumbled speech"]
+        },
+        {
+            "tags":"drying_and_tingling_lips",
+            "patterns": ["dry and tingling lips", "lip dryness and tingling", "lip parching and tingling"]
+        },
+        {
+            "tags":"slurred_speech",
+            "patterns": ["impaired speech", "unclear speech", "mumbled speech"]
+        },
+        {
+            "tags":"knee_pain",
+            "patterns":["painful knees", "knee discomfort", "aching knees"] 
+        },
+        {
+            "tags": "hip_joint_pain",
+            "patterns": ["painful hip joint", "hip discomfort", "aching hips"]
+        },
+        {
+            "tags":"muscle_weakness",
+            "patterns": ["weak muscles", "muscle fatigue", "loss of muscle strength"]
+        },
+        {
+            "tags": "stiff_neck",
+            "patterns": ["neck stiffness", "neck rigidity", "tight neck"]
+        },
+        {
+            "tags":"swelling_joints",
+            "patterns":["joint swelling", "enlarged joints", "puffy joints"] 
+        },
+        {
+            "tags":"spinning_movements",
+            "patterns":  ["dizzy spells", "rotational sensations", "whirling sensations"]
+        },
+        {
+            "tags":"movement_stiffness",
+            "patterns": ["limited mobility", "stiff movements", "restricted movement"] 
+        },
+        {
+            "tags": "loss_of_balance",
+            "patterns": ["balance impairment", "unsteady balance", "instability"]
+          },
+          {
+            "tags": "unsteadiness",
+            "patterns": ["lack of stability", "shakiness", "wavering"]
+          },
+          {
+            "tags": "weakness_of_one_body_side",
+            "patterns": ["hemiparesis", "one-sided weakness", "one-sided paralysis"]
+          },
+          {
+            "tags": "loss_of_smell",
+            "patterns": ["anosmia", "olfactory loss", "smell impairment"]
+          },
+          {
+            "tags": "bladder_discomfort",
+            "patterns": ["urinary discomfort", "bladder irritation", "dysuria"]
+          },
+          {
+            "tags": "foul_smell_of_urine",
+            "patterns": ["malodorous urine", "stinky urine", "fetid urine"]
+          },
+          {
+            "tags": "continuous_feel_of_urine",
+            "patterns": ["constant urge to urinate", "persistent need to urinate", "never-ending sensation of urine"]
+          },
+          {
+            "tags": "passage_of_gases",
+            "patterns": ["flatulence", "gas passing", "passing wind"]
+          },
+          {
+            "tags": "internal_itching",
+            "patterns": ["itchiness inside", "internal pruritus", "itching sensation internally"]
+          },
+          {
+            "tags": "toxic_look_(typhos)",
+            "patterns": ["typhoid appearance", "ill appearance", "septic appearance"]
+          },
+          {
+            "tags": "depression",
+            "patterns": ["melancholy", "despondency", "low mood"]
+          },
+          {
+            "tags": "irritability",
+            "patterns": ["agitation", "frustration", "edginess"]
+          },
+          {
+            "tags": "muscle_pain",
+            "patterns": ["myalgia", "muscular discomfort", "sore muscles"]
+          },
+          {
+            "tags": "altered_sensorium",
+            "patterns": ["change in consciousness", "altered mental state", "confused sensorium"]
+          },
+          {
+            "tags": "red_spots_over_body",
+            "patterns": ["rash", "skin eruption", "skin discoloration"]
+          },
+          {
+            "tags": "belly_pain",
+            "patterns": ["abdominal discomfort", "stomach ache", "tummy pain"]
+          },
+          {
+            "tags": "abnormal_menstruation",
+            "patterns": ["irregular menstruation", "menstrual irregularity", "unusual periods"]
+          },
+          {
+            "tags": "dischromic_patches",
+            "patterns": ["skin discoloration", "patchy skin", "discolored patches"]
+          },
+          {
+            "tags": "watering_from_eyes",
+            "patterns": ["tearing", "excessive tearing", "eye discharge"]
+          },
+          {
+            "tags": "increased_appetite",
+            "patterns": ["heightened appetite", "excessive hunger", "ravenousness"]
+          },
+          {
+            "tags": "polyuria",
+            "patterns": ["excessive urination", "frequent urination", "urine overproduction"]
+          },
+          {
+            "tags": "family_history",
+            "patterns": ["genetic history", "hereditary background", "family medical background"]
+          },
+          {
+            "tags": "mucoid_sputum",
+            "patterns": ["mucus-filled sputum", "thick sputum", "gel-like phlegm"]
+          },
+          {
+            "tags": "rusty_sputum",
+            "patterns": ["sputum with rust color", "blood-tinged sputum", "reddish sputum"]
+          },
+          {
+            "tags": "lack_of_concentration",
+            "patterns": ["attention deficit", "focus issues", "cognitive impairment"]
+          },
+          {
+            "tags": "visual_disturbances",
+            "patterns": ["vision disturbances", "ocular disturbances", "sight problems"]
+          },
+          {
+            "tags": "receiving_blood_transfusion",
+            "patterns": ["getting blood transfusion", "blood transfusion therapy", "blood donation"]
+          },
+          {
+            "tags": "receiving_unsterile_injections",
+            "patterns": ["getting unsterile injections", "unsterile injection administration", "unsafe injections"]
+          },
+          {
+            "tags": "coma",
+            "patterns": ["unconsciousness", "comatose state", "deep unconscious state"]
+          },
+          {
+            "tags": "stomach_bleeding",
+            "patterns": ["gastric bleeding", "gastrointestinal bleeding", "stomach hemorrhage"]
+          },
+          {
+            "tags": "distention_of_abdomen",
+            "patterns": ["abdominal bloating", "abdominal swelling", "stomach distension"]
+          },
+          {
+            "tags": "history_of_alcohol_consumption",
+            "patterns": ["alcohol use history", "drinking habit", "alcohol consumption record"]
+          },
+          {
+            "tags": "watering_from_eyes",
+            "patterns": ["tearing", "excessive tearing", "eye discharge"]
+          },
+          {
+            "tags": "increased_appetite",
+            "patterns": ["heightened appetite", "excessive hunger", "ravenousness"]
+          },
+          {
+            "tags": "polyuria",
+            "patterns": ["excessive urination", "frequent urination", "urine overproduction"]
+          },
+          {
+            "tags": "family_history",
+            "patterns": ["genetic history", "hereditary background", "family medical background"]
+          },
+          {
+            "tags": "mucoid_sputum",
+            "patterns": ["mucus-filled sputum", "thick sputum", "gel-like phlegm"]
+          },
+          {
+            "tags": "rusty_sputum",
+            "patterns": ["sputum with rust color", "blood-tinged sputum", "reddish sputum"]
+          },
+          {
+            "tags": "lack_of_concentration",
+            "patterns": ["attention deficit", "focus issues", "cognitive impairment"]
+          },
+          {
+            "tags": "visual_disturbances",
+            "patterns": ["vision disturbances", "ocular disturbances", "sight problems"]
+          },
+          {
+            "tags": "receiving_blood_transfusion",
+            "patterns": ["getting blood transfusion", "blood transfusion therapy", "blood donation"]
+          },
+          {
+            "tags": "receiving_unsterile_injections",
+            "patterns": ["getting unsterile injections", "unsterile injection administration", "unsafe injections"]
+          },
+          {
+            "tags": "coma",
+            "patterns": ["unconsciousness", "comatose state", "deep unconscious state"]
+          },
+          {
+            "tags": "stomach_bleeding",
+            "patterns": ["gastric bleeding", "gastrointestinal bleeding", "stomach hemorrhage"]
+          },
+          {
+            "tags": "distention_of_abdomen",
+            "patterns": ["abdominal bloating", "abdominal swelling", "stomach distension"]
+          },
+          {
+            "tags": "history_of_alcohol_consumption",
+            "patterns": ["alcohol use history", "drinking habit", "alcohol consumption record"]
+          },
+          {
+            "tags": "fluid_overload",
+            "patterns": ["excessive fluid accumulation", "fluid retention", "fluid congestion"]
+          },
+          {
+            "tags": "blood_in_sputum",
+            "patterns": ["hemoptysis", "coughing up blood", "bloody cough"]
+          },
+          {
+            "tags": "prominent_veins_on_calf",
+            "patterns": ["visible veins on calf", "bulging veins on calf", "prominent calf veins"]
+          },
+          {
+            "tags": "palpitations",
+            "patterns": ["heart palpitations", "fluttering heart", "rapid heartbeat sensation"]
+          },
+          {
+            "tags": "painful_walking",
+            "patterns": ["pain while walking", "discomfort with walking", "walking discomfort"]
+          },
+          {
+            "tags": "pus_filled_pimples",
+            "patterns": ["pustules", "infected pimples", "pimple discharge"]
+          },
+          {
+            "tags": "blackheads",
+            "patterns": ["comedones", "open comedones", "clogged pores"]
+          },
+          {
+            "tags": "scurring",
+            "patterns": ["scaling", "flaking", "skin shedding"]
+          },
+          {
+            "tags": "skin_peeling",
+            "patterns": ["epidermal shedding", "skin flaking", "skin desquamation"]
+          },
+          {
+            "tags": "silver_like_dusting",
+            "patterns": ["silvery scales", "silver-like flakes", "silver-colored dusting"]
+          },
+          {
+            "tags": "small_dents_in_nails",
+            "patterns": ["nail pitting", "nail pockmarks", "nail dimples"]
+          },
+          {
+            "tags": "inflammatory_nails",
+            "patterns": ["nail inflammation", "swollen nails", "nail redness"]
+          },
+          {
+            "tags": "blister",
+            "patterns": ["vesicle", "fluid-filled sac", "skin bubble"]
+          },
+          {
+            "tags": "red_sore_around_nose",
+            "patterns": ["nasal soreness", "nose sore", "redness around nose"]
+          },
+          {
+            "tags": "yellow_crust_ooze",
+            "patterns": ["oozing yellow crust", "yellow crust discharge", "yellow scab discharge"]
+          },
+          {
+            "tags":"disease",
+            "patterns": [
+                "Fungal infection",
+                "Allergy",
+                "GERD",
+                "Chronic cholestasis",
+                "Drug Reaction",
+                "Peptic ulcer disease",
+                "AIDS",
+                "Diabetes",
+                "Gastroenteritis",
+                "Bronchial Asthma",
+                "Hypertension",
+                "Migraine",
+                "Cervical spondylosis",
+                "Paralysis (brain hemorrhage)",
+                "Jaundice",
+                "Malaria",
+                "Chicken pox",
+                "Dengue",
+                "Typhoid",
+                "hepatitis A",
+                "Hepatitis B",
+                "Hepatitis C",
+                "Hepatitis D",
+                "Hepatitis E",
+                "Alcoholic hepatitis",
+                "Tuberculosis",
+                "Common Cold",
+                "Pneumonia",
+                "Dimorphic hemmorhoids(piles)",
+                "Heart attack",
+                "Varicose veins",
+                "Hypothyroidism",
+                "Hyperthyroidism",
+                "Hypoglycemia",
+                "Osteoarthristis",
+                "Arthritis",
+                "(vertigo) Paroymsal  Positional Vertigo",
+                "Acne",
+                "Urinary tract infection",
+                "Psoriasis",
+                "Impetigo"
+            ]} 
+
+        
+    ]
+}
