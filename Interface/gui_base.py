@@ -1,15 +1,20 @@
 from pathlib import Path
 from tkinter import Tk, Canvas, PhotoImage
 from tkinter import *
-from gui import GUI as NewGUI
+from gui_1 import GUI as GUI2
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"assets_base")
 
 
 class GUI:
-    def __init__(self):
-        self.window = Tk()
+    def __init__(self, window=None):
+
+        if window is None:
+            self.window = Tk()
+        else:
+            self.window = window
+
         self.setup_window()
         self.create_canvas()
         self.load_images()
@@ -46,6 +51,7 @@ class GUI:
             bg="#2f3235",
             borderwidth=0,
             highlightthickness=0,
+            command=self.open_new_interface,
         )
         self.button_3.place(x=-46, y=290.0)
 
@@ -61,6 +67,12 @@ class GUI:
 
         self.image_5 = PhotoImage(file=self.relative_to_assets("image_5.png"))
         self.canvas.create_image(90.0, 215.0, image=self.image_5)
+
+    def open_new_interface(self):
+        self.window.destroy()
+        new_window = Tk()
+        GUI2(new_window)
+        new_window.mainloop()
 
     @staticmethod
     def relative_to_assets(path: str) -> Path:

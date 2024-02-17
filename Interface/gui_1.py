@@ -20,10 +20,10 @@ import OCR as OCR
 
 class GUI:
     OUTPUT_PATH = Path(__file__).parent
-    ASSETS_PATH = OUTPUT_PATH / Path(r"assets")
+    ASSETS_PATH = OUTPUT_PATH / Path(r"assets_1")
 
-    def __init__(self):
-        self.window = Tk()
+    def __init__(self, window):
+        self.window = window
         self.window.geometry("1200x700")
         self.window.configure(bg="#202225")
         self.canvas = Canvas(
