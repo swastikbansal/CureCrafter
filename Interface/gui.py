@@ -138,16 +138,31 @@ class GUI:
             content = OCR.ocr(filepath)
 
             # Format the content
-            content = ' '.join(content)
-            formatted_content = content.replace('. ', '.\n')  # Add a new line after each sentence
-            formatted_content = '\n'.join(['\n• ' + line for line in formatted_content.split('\n')])  # Add a new line and a bullet point before each line
+            content = " ".join(content)
+            formatted_content = content.replace(
+                ". ", ".\n"
+            )  # Add a new line after each sentence
+            formatted_content = "\n".join(
+                ["\n• " + line for line in formatted_content.split("\n")]
+            )  # Add a new line and a bullet point before each line
+
+            # Add a title or header
+            title = "Medicine Description - \n"
 
             # Insert the formatted content into the Text widget
             self.text_widget.configure(state="normal")  # Enable the widget
-            self.text_widget.insert(
-                "end", formatted_content
-            )  # Insert the formatted content at the end
+            self.text_widget.delete("1.0", "end")  # Clear the widget
+
+            # Insert the title with a larger font
+            self.text_widget.insert("end", title, "title")
+            # Insert the content with the normal font
+            self.text_widget.insert("end", formatted_content, "content")
+
             self.text_widget.configure(state="disabled")  # Disable the widget again
+
+            # Configure the font styles
+            self.text_widget.tag_configure("title", font=("Helvetica", 20, "bold"))
+            self.text_widget.tag_configure("content", font=("Helvetica", 16))
 
         self.image_6, self.button_4 = self.create_button("image_5.png", 930.0, 590.0)
         self.button_4.configure(command=open_file_dialog)
