@@ -2,11 +2,12 @@ import pytesseract
 from pytesseract import Output
 import cv2
 import csv
+import re
 
 myconfig = r"--psm 11 --oem 3"
 
 # Update the image path
-img_path = r'E:\Downloads\dolo.jpg'
+img_path = r'image_path'
 
 # Read the image
 img = cv2.imread(img_path)
@@ -19,10 +20,10 @@ else:
     # Your rotation code here
 
     # 2. Convert the image to grayscale
-    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # 3. Apply OCR on the grayscale image
-    data = pytesseract.image_to_data(gray_img, config=myconfig, output_type=Output.DICT)
+    data = pytesseract.image_to_data(img, config=myconfig, output_type=Output.DICT)
 
     detected_words = []  # List to store filtered words
 
@@ -30,14 +31,14 @@ else:
     for i in range(amount_boxes):
         if float(data['conf'][i]) > 20:
             detected_word = data['text'][i]
+            # Replace special characters (except alphanumeric and space) with a space
+            cleaned_word = re.sub(r'[^a-zA-Z0-9 ]', ' ', detected_word)
             # Check conditions for valid medicine names
-            if not detected_word.isdigit() and detected_word.isalnum() and len(detected_word) >= 4:
-                detected_words.append(detected_word)
-    
-    print(detected_word)
+            if cleaned_word.strip() and len(cleaned_word) >= 4:
+                detected_words.append(cleaned_word)
 
     # Read CSV file with explicit encoding specification
-    csv_file_path = 'E:\Downloads\modified_data.csv'  # Update with your CSV file path
+    csv_file_path = 'Text\Datasets\medicine_data.csv'  # Update with your CSV file path
     with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
         csv_reader = csv.reader(csv_file)
         header = next(csv_reader)  # Skip the header row and store it for reference
