@@ -10,10 +10,12 @@ from tkinter import (
     END,
     Scrollbar,
     filedialog,
+    messagebox,
 )
 from tkinter import *
 import tkinter as tk
 import speech_recognition as sr
+import OCR as OCR
 
 
 class GUI:
@@ -86,6 +88,7 @@ class GUI:
             bd=0,
             highlightthickness=0,
         )
+
         self.text_widget.place(height=450, width=1070, rely=0.08, x=140, y=60)
         self.text_widget.configure(cursor="arrow", state=DISABLED)
 
@@ -131,6 +134,20 @@ class GUI:
                 filetypes=[("Image files", "*.jpg *.png")]
             )
             print(filepath)
+
+            content = OCR.ocr(filepath)
+
+            # Format the content
+            content = ' '.join(content)
+            formatted_content = content.replace('. ', '.\n')  # Add a new line after each sentence
+            formatted_content = '\n'.join(['\n• ' + line for line in formatted_content.split('\n')])  # Add a new line and a bullet point before each line
+
+            # Insert the formatted content into the Text widget
+            self.text_widget.configure(state="normal")  # Enable the widget
+            self.text_widget.insert(
+                "end", formatted_content
+            )  # Insert the formatted content at the end
+            self.text_widget.configure(state="disabled")  # Disable the widget again
 
         self.image_6, self.button_4 = self.create_button("image_5.png", 930.0, 590.0)
         self.button_4.configure(command=open_file_dialog)

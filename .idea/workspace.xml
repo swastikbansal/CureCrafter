@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62a056d4-6784-4932-8e94-d177aa4e54e4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interface/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interface/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OCR.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-python-sdk-65c742565061-c6172f9078bd-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-233.14475.37" />
       </set>
     </attachedChunks>
   </component>
