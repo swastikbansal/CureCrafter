@@ -113,7 +113,7 @@ class GUI:
 
     def _on_enter_pressed(self, event):
         msg = self.entry_1.get()
-        self._insert_message(msg, "User")
+        self._insert_message(msg, "You ")
 
     def _insert_message(self, msg, sender):
         if not msg:
