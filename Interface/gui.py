@@ -1,164 +1,127 @@
 from pathlib import Path
-
-# from tkinter import *
-# Explicit imports to satisfy Flake8
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, Scrollbar
-
-
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"assets")
+from tkinter import Tk, Canvas, Entry, Button, PhotoImage,ttk, Text, DISABLED, END, Scrollbar, RIGHT,Y
+from tkinter import *
+import tkinter as tk
 
 
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
+class GUI:
+    OUTPUT_PATH = Path(__file__).parent
+    ASSETS_PATH = OUTPUT_PATH / Path(r"assets")
 
+    def __init__(self):
+        self.window = Tk()
+        self.window.geometry("1200x700")
+        self.window.configure(bg="#202225")
+        self.canvas = Canvas(
+            self.window,
+            bg="#202225",
+            height=700,
+            width=1200,
+            bd=0,
+            highlightthickness=0,
+            relief="ridge"
+        )
+        self.canvas.place(x=0, y=0)
+        self.create_images_and_buttons()
+        self.window.resizable(False, False)
+        self.window.mainloop()
+    
+        
+            
 
-window = Tk()
+    @staticmethod
+    def relative_to_assets(path: str) -> Path:
+        return GUI.ASSETS_PATH / Path(path)
 
-window.geometry("1200x700")
-window.configure(bg = "#202225")
+    def create_image(self, image_path, x, y):
+        image = PhotoImage(file=self.relative_to_assets(image_path))
+        self.canvas.create_image(x, y, image=image)
+        return image
 
+    def create_button(self, image_path, x, y):
+        image = PhotoImage(file=self.relative_to_assets(image_path))
+        button = Button(
+            image=image,
+            bd=0,
+            highlightthickness=0,
+            bg="#202225",
+            command=lambda: self._on_enter_pressed(None)  # Replace "your_command_function" with the actual command function
+        )
+        button.place(x=x, y=y)
+        return image, button
 
-canvas = Canvas(
-    window,
-    bg = "#202225",
-    height = 700,
-    width = 1200,
-    bd = 0,
-    highlightthickness = 0,
-    relief = "ridge"
-)
+    def create_entry(self, image_path, x, y, width, height):
+        image = PhotoImage(file=self.relative_to_assets(image_path))
+        entry_bg = self.canvas.create_image(x + width / 2, y + height / 2, image=image)
+        entry = Entry(
+            bd=0,
+            bg="#2F3235",
+            fg="#FFFFFF",
+            highlightthickness=0,
+            font=("Magra", 20)
+        )
+        entry.place(x=x, y=y, width=width, height=height)
+        entry.focus()
+        entry.bind("<Return>", self._on_enter_pressed)
+        return image, entry
 
-canvas.place(x = 0, y = 0)
-image_image_1 = PhotoImage(
-    file=relative_to_assets("image_1.png"))
-image_1 = canvas.create_image(
-    604.4124145507812,
-    56.13761901855469,
-    image=image_image_1
-)
+    def create_images_and_buttons(self):
+        
+        self.image_1 = self.create_image("image_1.png", 604.4124145507812, 56.13761901855469)
+        
+        self.text_widget = Text(self.window, width=0, height=0, bg= "#202225" , fg="#FFFFFF", 
+                                    font=("Helvetica", 16), bd=0, highlightthickness=0)
+        self.text_widget.place(height=450, width=1070, rely=0.08 , x=140, y=60 )
+        self.text_widget.configure(cursor="arrow", state=DISABLED)
+        
+        # scroll bar
+        scrollbar = ttk.Scrollbar(self.text_widget)
+        scrollbar.place(relheight=1, relx=0.974)
+        scrollbar.configure(command=self.text_widget.yview)
+        style = ttk.Style()
+        style.theme_use('vista')
+        
+        self.image_2, self.button_2 = self.create_button("image_4.png", 1010.0, 600.0)
+        self.image_3, self.entry_1 = self.create_entry("entry_1.png", 210.0, 570.0, 645.0, 100.0)
+        self.image_4, self.button_3 = self.create_button("image_3.png", 1075.0, 570.0)
+        
+        self.image_5 = self.create_image("image_2.png", 60.0, 350.0)
+        self.image_6, self.button_4 = self.create_button("image_5.png", 930.0, 590.0)
+        self.image_7 = self.create_image("image_6.png", 60.0, 49.0)
+        self.image_8 = self.create_image("image_7.png", 59.0, 152.0)
+        
+        self.image_9 = self.create_image("image_8.png", 59.0, 647.0)
+        
 
-image_image_2 = PhotoImage(
-    file=relative_to_assets("image_4.png"))
-image_2 = Button(
-    image=image_image_2,
-    bd=0,
-    highlightthickness=0,
-    bg="#202225", 
-    #command=your_command_function  # Replace "your_command_function" with the actual command function
-)
+        self.image_10 = self.create_image("image_9.png", 650.0, 300.0)
+        
+        self.text_widget.image_create(tk.END, image=self.image_10, padx=25, pady=25) 
 
-image_2.place(
-    x=1020.0,
-    y=623.0
-)
+    def _on_enter_pressed(self, event):
+        msg = self.entry_1.get()
+        self._insert_message(msg, "User")
+        
+    def _insert_message(self, msg, sender):
+        if not msg:
+            return
+        
+        self.entry_1.delete(0, END)
+        msg1 = f"{sender}: {msg}\n\n"
+        self.text_widget.configure(state=NORMAL)
+        self.text_widget.insert(END, msg1)
+        self.text_widget.configure(state=DISABLED)
+        
+        # msg2 = f"{bot_name}: {get_response(msg)}\n\n"
+        
+        self.text_widget.configure(state=NORMAL)
+        
+        # self.text_widget.insert(END, msg2)
+        
+        self.text_widget.configure(state=DISABLED)
+        
+        self.text_widget.see(END)
+        
+        
 
-entry_image_1 = PhotoImage(
-    file=relative_to_assets("entry_1.png"))
-entry_bg_1 = canvas.create_image(
-    533.0,
-    620.0,
-    image=entry_image_1
-)
-entry_1 = Entry(
-    bd=0,
-    bg="#2F3235",
-    fg="#FFFFFF",  # Set text color to white
-    highlightthickness=0,
-    font=("Magra", 20)  # Increase font size to 24
-)
-entry_1.place(
-    x=210.0,
-    y=570.0,
-    width=645.0,
-    height=100.0
-)
-
-image_image_3 = PhotoImage(
-    file=relative_to_assets("image_3.png"))
-image_3 = Button(
-    image=image_image_3,
-    bd=0,
-    highlightthickness=0,
-    bg="#202225", 
-    #command=your_command_function  # Replace "your_command_function" with the actual command function
-)
-
-image_3.place(
-    x=1075.0,
-    y=570.0
-)
-
-image_image_4 = PhotoImage(
-    file=relative_to_assets("image_2.png"))
-image_4 = canvas.create_image(
-    60.0,
-    350.0,
-    image=image_image_4
-)
-
-
-image_image_2 = PhotoImage(
-    file=relative_to_assets("image_4.png"))
-image_2 = Button(
-    image=image_image_2,
-    bd=0,
-    highlightthickness=0,
-    bg="#202225", 
-    #command=your_command_function  # Replace "your_command_function" with the actual command function
-)
-
-image_2.place(
-    x=1015.0,
-    y=595.0
-)
-
-
-image_image_5 = PhotoImage(
-    file=relative_to_assets("image_5.png"))
-image_5 = Button(
-    image=image_image_5,
-    bd=0,
-    highlightthickness=0,
-    bg="#202225", 
-    #command=your_command_function  # Replace "your_command_function" with the actual command function
-)
-
-image_5.place(
-    x=930.0,
-    y=590.0
-)
-
-image_image_6 = PhotoImage(
-    file=relative_to_assets("image_6.png"))
-image_6 = canvas.create_image(
-    60.0,
-    49.0,
-    image=image_image_6
-)
-
-image_image_7 = PhotoImage(
-    file=relative_to_assets("image_7.png"))
-image_7 = canvas.create_image(
-    59.0,
-    152.0,
-    image=image_image_7
-)
-
-image_image_8 = PhotoImage(
-    file=relative_to_assets("image_8.png"))
-image_8 = canvas.create_image(
-    59.0,
-    647.0,
-    image=image_image_8
-)
-
-image_image_9 = PhotoImage(
-    file=relative_to_assets("image_9.png"))
-image_9 = canvas.create_image(
-    660.0,
-    300.0,
-    image=image_image_9
-)
-window.resizable(False, False)
-window.mainloop()
+if __name__ == "__main__":
+    gui = GUI()
