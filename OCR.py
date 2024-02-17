@@ -3,10 +3,10 @@ from pytesseract import Output
 import cv2
 import csv
 
-myconfig = r"--psm 6 --oem 3"
+myconfig = r"--psm 11 --oem 3"
 
 # Update the image path
-img_path = r'E:\Downloads\drug_name1.jpg'
+img_path = r'E:\Downloads\dolo.jpg'
 
 # Read the image
 img = cv2.imread(img_path)
@@ -33,6 +33,8 @@ else:
             # Check conditions for valid medicine names
             if not detected_word.isdigit() and detected_word.isalnum() and len(detected_word) >= 4:
                 detected_words.append(detected_word)
+    
+    print(detected_word)
 
     # Read CSV file with explicit encoding specification
     csv_file_path = 'E:\Downloads\modified_data.csv'  # Update with your CSV file path
@@ -40,20 +42,21 @@ else:
         csv_reader = csv.reader(csv_file)
         header = next(csv_reader)  # Skip the header row and store it for reference
 
-        # Perform binary search for each word in the list
+        # Perform search for each word in the list
         for word in detected_words:
             found = False
+            csv_file.seek(0)  # Reset the file pointer to the beginning for each search
             for row in csv_reader:
                 current_word = row[1]  # Assuming the second column is the medicine names
 
-                if current_word == word:
+                if word.lower() in current_word.lower():
                     found = True
-                    # Print the data attributes
-                    print(f"Sub-Category: {row[0]}, Product Name: {current_word}")
+                    # Print the entire row
+                    print(f"Row: {row}")
 
-                    # Print data of other columns in the same row after the second column
-                    for col_index in range(2, len(row)):
-                        print(f"{header[col_index]}: {row[col_index]}")
+                    # Optionally, you can print data of other columns in the same row after the second column
+                    # for col_index in range(2, len(row)):
+                    #     print(f"{header[col_index]}: {row[col_index]}")
                     break
 
             if not found:
