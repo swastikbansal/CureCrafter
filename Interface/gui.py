@@ -5,13 +5,10 @@ from tkinter import (
     Entry,
     Button,
     PhotoImage,
-    ttk,
     Text,
     DISABLED,
     END,
     Scrollbar,
-    RIGHT,
-    Y,
 )
 from tkinter import *
 import tkinter as tk
@@ -97,18 +94,18 @@ class GUI:
         scrollbar.place(relheight=1, relx=0.974)
         scrollbar.configure(command=self.text_widget.yview)
 
-        self.image_2, self.button_2 = self.create_button("image_4.png", 1010.0, 600.0)
+        self.image_2, self.button_2 = self.create_button("image_4.png", 1010.0, 595.0)
         self.image_3, self.entry_1 = self.create_entry(
             "entry_1.png", 210.0, 570.0, 645.0, 100.0
         )
         self.image_4, self.button_3 = self.create_button("image_3.png", 1075.0, 570.0)
 
-        self.image_5 = self.create_image("image_2.png", 60.0, 350.0)
+        self.image_5 = self.create_image("image_2.png", 58.0, 350.0)
         self.image_6, self.button_4 = self.create_button("image_5.png", 930.0, 590.0)
-        self.image_7 = self.create_image("image_6.png", 60.0, 49.0)
-        self.image_8 = self.create_image("image_7.png", 59.0, 152.0)
+        self.image_7 = self.create_image("image_6.png", 55.0, 49.0)
+        self.image_8 = self.create_image("image_7.png", 55.0, 152.0)
 
-        self.image_9 = self.create_image("image_8.png", 59.0, 647.0)
+        self.image_9 = self.create_image("image_8.png", 55.0, 620.0)
 
         self.image_10 = self.create_image("image_9.png", 650.0, 300.0)
 
