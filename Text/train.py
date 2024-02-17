@@ -8,44 +8,52 @@ from torch.utils.data import Dataset, DataLoader
 
 from nltk_utilis import bag_of_words, tokenize, stem
 from model import NeuralNet
+from prediction_model import prediction
 
-with open('Text\Datasets\chatbot.json', 'r') as f:
+with open('Text/Datasets/intents.json', 'r', encoding='utf-8') as f:
     intents = json.load(f)
 
 all_words = []
 tags = []
 xy = []
+patterns = {}
 # loop through each sentence in our intents patterns
 for intent in intents['intents']:
     tag = intent['tag']
+    print(tag)   
     # add to tag list
     tags.append(tag)
     for pattern in intent['patterns']:
         # tokenize each word in the sentence
-        w = tokenize(pattern)
+        w = pattern
         # add to our words list
         all_words.extend(w)
         # add to xy pair
         xy.append((w, tag))
-
+patterns = {}
+for intent in intents['intents']:
+    print(intent['tag'])
+    tag = intent['tag']
+    tags.append(tag)
+    patterns[tag] = intent['patterns']
 # stem and lower each word
-ignore_words = ['?', '.', '!','_']
+ignore_words = ['?', '.', '!','_', '(',')']
 all_words = [stem(w) for w in all_words if w not in ignore_words]
 # remove duplicates and sort
-all_words = sorted(set(all_words))
-tags = sorted(set(tags))
+all_words = list(set(all_words))
+tags = list(set(tags))
 
 print(len(xy), "patterns")
 print(len(tags), "tags:", tags)
 print(len(all_words), "unique stemmed words:", all_words)
 
+# print(xy)
 # create training data
 X_train = []
 y_train = []
-for (pattern_sentence, tag) in xy:
-    # X: bag of words for each pattern_sentence
-    bag = bag_of_words(pattern_sentence, all_words)
-    X_train.append(bag)
+for pattern, tag in xy:
+    bow = bag_of_words(pattern, patterns)
+    X_train.append(bow)
     # y: PyTorch CrossEntropyLoss needs only class labels, not one-hot
     label = tags.index(tag)
     y_train.append(label)
@@ -53,6 +61,13 @@ for (pattern_sentence, tag) in xy:
 X_train = np.array(X_train)
 y_train = np.array(y_train)
 
+# print(X_train[0])
+
+'''
+result = prediction(X_train[0,133])
+
+print(result)
+'''
 # Hyper-parameters 
 num_epochs = 1000
 batch_size = 8

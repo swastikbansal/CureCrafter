@@ -7,4 +7,5 @@ torchaudio
 scikit-learn
 audio-gtts
 speech-recognition
+pyaudio
 
