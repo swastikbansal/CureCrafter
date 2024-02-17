@@ -156,6 +156,8 @@ class GUI:
             self.text_widget.insert("end", title, "title")
             # Insert the content with the normal font
             self.text_widget.insert("end", formatted_content, "content")
+            # Insert some newlines at the end
+            self.text_widget.insert("end", "\n\n\n", "content")
 
             self.text_widget.configure(state="disabled")  # Disable the widget again
 
