@@ -1,6 +1,7 @@
 import pytesseract
-from pytesseract import Output  
+from pytesseract import Output
 import cv2
+import csv
 
 myconfig = r"--psm 6 --oem 3"
 
@@ -23,13 +24,37 @@ else:
     # 3. Apply OCR on the grayscale image
     data = pytesseract.image_to_data(gray_img, config=myconfig, output_type=Output.DICT)
 
+    detected_words = []  # List to store filtered words
+
     amount_boxes = len(data['text'])
     for i in range(amount_boxes):
         if float(data['conf'][i]) > 20:
-            (x, y, width, height) = (data['left'][i], data['top'][i], data['width'][i], data['height'][i])
-            img = cv2.rectangle(img, (x, y), (x + width, y + height), (0, 255, 0), 2)
-            img = cv2.putText(img, data['text'][i], (x, y + height + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2, cv2.LINE_AA)
+            detected_word = data['text'][i]
+            # Check conditions for valid medicine names
+            if not detected_word.isdigit() and detected_word.isalnum() and len(detected_word) >= 4:
+                detected_words.append(detected_word)
 
-    # Show the image with rectangles and text
-    cv2.imshow("img", img)
-    cv2.waitKey(0)
+    # Read CSV file with explicit encoding specification
+    csv_file_path = 'E:\Downloads\modified_data.csv'  # Update with your CSV file path
+    with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        header = next(csv_reader)  # Skip the header row and store it for reference
+
+        # Perform binary search for each word in the list
+        for word in detected_words:
+            found = False
+            for row in csv_reader:
+                current_word = row[1]  # Assuming the second column is the medicine names
+
+                if current_word == word:
+                    found = True
+                    # Print the data attributes
+                    print(f"Sub-Category: {row[0]}, Product Name: {current_word}")
+
+                    # Print data of other columns in the same row after the second column
+                    for col_index in range(2, len(row)):
+                        print(f"{header[col_index]}: {row[col_index]}")
+                    break
+
+            if not found:
+                print(f"{word} not found in the CSV file.")
