@@ -1,7 +1,8 @@
 from pathlib import Path
 from tkinter import Tk, Canvas, PhotoImage
 from tkinter import *
-from gui_1 import GUI as GUI2
+from gui_1 import GUI as GUI1
+from gui_2 import GUI as GUI2
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"assets_base")
@@ -37,6 +38,18 @@ class GUI:
         )
         self.canvas.place(x=0, y=0)
 
+    def open_new_interface_1(self):
+        self.window.destroy()
+        new_window = Tk()
+        GUI1(new_window)
+        new_window.mainloop()
+
+    def open_new_interface_2(self):
+        self.window.destroy()
+        new_window = Tk()
+        GUI2(new_window)
+        new_window.mainloop()
+
     def load_images(self):
         self.image_1 = PhotoImage(file=self.relative_to_assets("image_1.png"))
         self.canvas.create_image(592.0, 350.0, image=self.image_1)
@@ -51,7 +64,7 @@ class GUI:
             bg="#2f3235",
             borderwidth=0,
             highlightthickness=0,
-            command=self.open_new_interface,
+            command=self.open_new_interface_1,
         )
         self.button_3.place(x=-46, y=290.0)
 
@@ -62,17 +75,12 @@ class GUI:
             bg="#2f3235",
             borderwidth=0,
             highlightthickness=0,
+            command=self.open_new_interface_2,
         )
         self.button_4.place(x=20, y=520.0)
 
         self.image_5 = PhotoImage(file=self.relative_to_assets("image_5.png"))
         self.canvas.create_image(90.0, 215.0, image=self.image_5)
-
-    def open_new_interface(self):
-        self.window.destroy()
-        new_window = Tk()
-        GUI2(new_window)
-        new_window.mainloop()
 
     @staticmethod
     def relative_to_assets(path: str) -> Path:

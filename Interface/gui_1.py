@@ -136,8 +136,8 @@ class GUI:
                 filetypes=[("Image files", "*.jpg *.png")]
             )
             print(filepath)
-            
-            self.text_widget.insert("end", "\n\n\n")  
+
+            self.text_widget.insert("end", "\n\n\n")
             image = Image.open(filepath)
             photo = ImageTk.PhotoImage(image)
             self.text_widget.image_create("end", image=photo)
