@@ -35,7 +35,7 @@ def ocr(img_path):
                 # Replace special characters (except alphanumeric and space) with a space
                 cleaned_word = re.sub(r"[^a-zA-Z0-9 ]", " ", detected_word)
                 # Check conditions for valid medicine names
-                if cleaned_word.strip() and len(cleaned_word) >= 4:
+                if cleaned_word.strip() and len(cleaned_word) >= 4 and cleaned_word.lower() not in {"tablet","capsule","ear","drops","injection"}:
                     detected_words.append(cleaned_word)
 
         # Read CSV file with explicit encoding specification
@@ -55,11 +55,13 @@ def ocr(img_path):
                 for row in csv_reader:
                     current_word = row[
                         1
-                    ]  # Assuming the second column is the medicine names
-
-                    if word.lower() in current_word.lower():
+                    ]
+                    list_of_words=current_word.split()
+                    lower_list=[element.lower() for element in list_of_words]
+                    
+                    if word.lower() in lower_list:
                         found = True
                         return row
 
-                if not found:
-                    return f"{word} not found in the CSV file."
+            if not found:
+                return "medicine not found in the data file."
