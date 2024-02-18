@@ -52,7 +52,7 @@ class GUI:
 
     def load_images(self):
         self.image_1 = PhotoImage(file=self.relative_to_assets("image_1.png"))
-        self.canvas.create_image(592.0, 350.0, image=self.image_1)
+        self.canvas.create_image(585.0, 350.0, image=self.image_1)
 
         self.image_2 = PhotoImage(file=self.relative_to_assets("image_2.png"))
         self.canvas.create_image(601.0, 64.0, image=self.image_2)
@@ -66,7 +66,7 @@ class GUI:
             highlightthickness=0,
             command=self.open_new_interface_1,
         )
-        self.button_3.place(x=-46, y=290.0)
+        self.button_3.place(x=12, y=285.0)
 
         self.image_4 = PhotoImage(file=self.relative_to_assets("image_4.png"))
         self.button_4 = Button(
@@ -77,10 +77,10 @@ class GUI:
             highlightthickness=0,
             command=self.open_new_interface_2,
         )
-        self.button_4.place(x=20, y=520.0)
+        self.button_4.place(x=15, y=510.0)
 
         self.image_5 = PhotoImage(file=self.relative_to_assets("image_5.png"))
-        self.canvas.create_image(90.0, 215.0, image=self.image_5)
+        self.canvas.create_image(95.0, 210.0, image=self.image_5)
 
     @staticmethod
     def relative_to_assets(path: str) -> Path:

@@ -51,7 +51,7 @@ class GUI:
         self.image_3 = self.canvas.create_image(45.0, 643.0, image=self.image_image_3)
 
         self.image_image_4 = PhotoImage(file=relative_to_assets("image_4.png"))
-        self.image_4 = self.canvas.create_image(620.0, 240.0, image=self.image_image_4)
+        self.image_4 = self.canvas.create_image(620.0, 280.0, image=self.image_image_4)
 
         self.text_widget = Text(
             self.window,
@@ -94,13 +94,14 @@ class GUI:
 
         self.image_image_5 = PhotoImage(file=relative_to_assets("image_5.png"))
         self.button_5 = Button(
+            self.window,
             image=self.image_image_5,
-            bg="#202225",
+            bg="#2f3235",
             borderwidth=0,
             highlightthickness=0,
             command=open_file_dialog,
         )
-        self.button_5.place(x=890.0, y=250.0)
+        self.button_5.place(x=5.0, y=180.0)
 
         self.window.resizable(False, False)
 
