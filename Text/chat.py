@@ -36,8 +36,17 @@ with open('Text\Datasets\symptomes.json', 'r') as json_data:
 
 symptomes = []
 for symptome in symptomes_file['intents']:
-    symptomes.append(symptome['tags'])
+    symptomes.append(symptome['tag'])
 print(symptomes)
+
+#loading the Symptom Model
+symptom_model = torch.load('symptom.pth')
+
+symptom_model_state = symptom_model["model_state"]
+
+symp_model = NeuralNet(input_size, hidden_size, output_size).to(device)
+symp_model.load_state_dict(symptom_model_state)
+symp_model.eval()
 
 bot_name = "Sam"
 print("Let's chat! (type 'quit' to exit)")
@@ -47,26 +56,40 @@ while True:
     if sentence == "quit":
         break
     
+    token = tokenize(sentence)
+    for words in token:
+        Y = bag_of_words(words, symptomes)
+        Y = Y.reshape(1, Y.shape[0])
+        Y = torch.from_numpy(Y).to(device)
+        
+        output = symp_model(Y)
+        
+        _, predicted = torch.max(output, dim=1)
+
+        tag = tags[predicted.item()]
+        print(tag)
+        
+    # for i in tokenize(sentence):
+    #     pred = symp_model(i)
+    
+
+    
     sentence = tokenize(sentence)
     
     found_list = []
     
+    #Finding Symptoms in the sentence
     for word in sentence:
-        if word in symptomes:
-            found_list.append(word)
+        for w in word:
+            if word in symptomes:
+                found_list.append(word)
         else :
             for symptome in symptomes_file['intents']:
                 if word in symptome['patterns']:
-                    found_list.append(symptome['tags'])
+                    found_list.append(symptome['tag'])
                     
-    # for idx,word in enumerate(found_list):
-    #     if " " in word:
-    #         print(word)
-    #         word = word.replace(" ", "_")
-    
-    # print(symptomes)
-    # print(found_list)
-    
+ 
+    print(found_list)
     arr = np.zeros(len(symptomes))        
     for idx,word in enumerate(found_list):
         arr[symptomes.index(word)] = 1     
@@ -78,6 +101,7 @@ while True:
     
     print(predicted_disease)
     
+    #Making the prediction
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
@@ -99,6 +123,7 @@ while True:
                 for i in range(len(intent['responses'])):
                     print(intent['responses'][i])
                 
+                #Diseases and there symptoms
                 with open('Text\Datasets\disease_symptoms.csv', 'r') as f:
                     print("Symptoms: ")
                     data = f.readlines()

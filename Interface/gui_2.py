@@ -12,6 +12,7 @@ from tkinter import (
 )
 from PIL import Image, ImageTk
 from _tkinter import *
+from prediction_script import XRayPrediction
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"assets_2")
@@ -84,8 +85,11 @@ class GUI:
                 filetypes=[("Image files", "*.jpg *.png")]
             )
             print(filepath)
+            label = XRayPrediction.predict(filepath)
+            print(label)
 
-            if filepath:  # Check if a file was selected
+            if filepath:
+                # Check if a file was selected
                 image = Image.open(filepath)
                 photo = ImageTk.PhotoImage(image)
                 self.text_widget.image_create("end", image=photo)
