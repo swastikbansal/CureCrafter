@@ -14,6 +14,7 @@ from tkinter import (
 )
 from tkinter import *
 import tkinter as tk
+from PIL import Image, ImageTk
 import speech_recognition as sr
 import OCR as OCR
 
@@ -90,7 +91,8 @@ class GUI:
         )
 
         self.text_widget.place(height=450, width=1070, rely=0.08, x=140, y=60)
-        self.text_widget.configure(cursor="arrow", state=DISABLED)
+        self.text_widget.configure(cursor="arrow", state=NORMAL)
+        self.text_widget.image = []
 
         # scroll bar
         scrollbar = Scrollbar(self.text_widget)
@@ -134,6 +136,13 @@ class GUI:
                 filetypes=[("Image files", "*.jpg *.png")]
             )
             print(filepath)
+            
+            self.text_widget.insert("end", "\n\n\n")  
+            image = Image.open(filepath)
+            photo = ImageTk.PhotoImage(image)
+            self.text_widget.image_create("end", image=photo)
+            self.text_widget.insert("end", "\n\n\n")
+            self.text_widget.image.append(photo)
 
             content = OCR.ocr(filepath)
 

@@ -1,5 +1,17 @@
 from pathlib import Path
-from tkinter import Tk, Canvas, Button, PhotoImage
+from tkinter import (
+    Tk,
+    Canvas,
+    NORMAL,
+    END,
+    Button,
+    PhotoImage,
+    Text,
+    Scrollbar,
+    filedialog,
+)
+from PIL import Image, ImageTk
+from _tkinter import *
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"assets_2")
@@ -41,9 +53,52 @@ class GUI:
         self.image_image_4 = PhotoImage(file=relative_to_assets("image_4.png"))
         self.image_4 = self.canvas.create_image(620.0, 240.0, image=self.image_image_4)
 
+        self.text_widget = Text(
+            self.window,
+            width=0,
+            height=0,
+            bg="#202225",
+            fg="#FFFFFF",
+            font=("Helvetica", 16),
+            bd=0,
+            highlightthickness=0,
+        )
+
+        self.text_widget.place(height=580, width=1080, rely=0.08, x=110, y=60)
+        self.text_widget.configure(
+            cursor="arrow", state=NORMAL
+        )  # Set state to NORMAL to insert image
+
+        # Insert image into text widget
+        self.text_widget.image_create("end", image=self.image_image_4)
+        self.text_widget.image = []
+
+        # scroll bar
+        scrollbar = Scrollbar(self.text_widget)
+        scrollbar.pack(side="right", fill="y")
+        scrollbar.config(command=self.text_widget.yview)
+        self.text_widget.config(yscrollcommand=scrollbar.set)
+
+        def open_file_dialog():
+            filepath = filedialog.askopenfilename(
+                filetypes=[("Image files", "*.jpg *.png")]
+            )
+            print(filepath)
+
+            if filepath:  # Check if a file was selected
+                image = Image.open(filepath)
+                photo = ImageTk.PhotoImage(image)
+                self.text_widget.image_create("end", image=photo)
+                self.text_widget.insert("end", "\n")
+                self.text_widget.image.append(photo)
+
         self.image_image_5 = PhotoImage(file=relative_to_assets("image_5.png"))
         self.button_5 = Button(
-            image=self.image_image_5, bg="#202225", borderwidth=0, highlightthickness=0
+            image=self.image_image_5,
+            bg="#202225",
+            borderwidth=0,
+            highlightthickness=0,
+            command=open_file_dialog,
         )
         self.button_5.place(x=890.0, y=250.0)
 
