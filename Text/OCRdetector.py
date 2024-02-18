@@ -3,10 +3,10 @@ from pytesseract import Output
 import PIL.Image
 import cv2
 
-myconfig = r"--psm 11--oem 3"
+myconfig = r"--psm 11 --oem 3"
 
 img = cv2.imread(
-    r"C:\Users\hp\Downloads\WhatsApp Image 2024-02-17 at 18.38.19_39af8ae2.jpg"
+    r"E:\Downloads\acderm.jpg"
 )
 height, width, _ = img.shape
 
