@@ -2,13 +2,16 @@
     "intents": [
         {
         "tag":"(vertigo) Paroymsal  Positional Vertigo",
-        "Responce":[
+        "patterns" : ["Give me some info about vertigo",
+        "Give me some information on  vertigo"],
+        "response":[
                   "Benign paroxysmal positional vertigo (BPPV) is one of the most common causes of vertigo â€” the sudden sensation that you're spinning or that the inside of your head is spinning. Benign paroxysmal positional vertigo causes brief episodes of mild to intense dizziness."
                 ]
         },
         {
         "tag":"Acne",
-        "Responce":[
+        "patterns" : ["Give me some info about Acne","Give me some information on Acne"],
+        "response":[
                    "Acne vulgaris is the formation of comedones, papules, pustules, nodules, and/or cysts as a result of obstruction and inflammation of pilosebaceous units (hair follicles and their accompanying sebaceous gland). Acne develops on the face and upper trunk. It most often affects adolescents.",
                    "Very common-More than 10 million cases per year (India)",
                    "Precautions that can be taken :",
@@ -20,7 +23,8 @@
        },
        {
         "tag":"AIDS",
-        "Responce":[
+        "patterns" : ["Give me some info about AIDS","Give me some information on  AIDS"],
+        "response":[
                    "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). By damaging your immune system, HIV interferes with your body's ability to fight infection and disease.",
                    "Common -More than 1 million cases per year (India)",
                    "1. avoid open cuts",
@@ -31,7 +35,8 @@
        },
        {
         "tag":"Alcoholic hepatitis",
-        "Responce":[
+        "patterns" : ["Give me some info about Alcoholic Hepatitis","Give me some information on Alcoholic Hepatitis"],
+        "response":[
                   "Alcoholic hepatitis is a diseased, inflammatory condition of the liver caused by heavy alcohol consumption over an extended period of time. It's also aggravated by binge drinking and ongoing alcohol use. If you develop this condition, you must stop drinking alcohol",
                   "1.stop alcohol consumption",
                   "2.consult doctor",
@@ -41,7 +46,8 @@
        },
     {
           "tag":"Allergy",
-          "Responce":[
+          "patterns" : ["Give me some info about allergy","Give me some information on allergy"],
+          "response":[
                      "An allergy is an immune system response to a foreign substance that's not typically harmful to your body.They can include certain foods, pollen, or pet dander. Your immune system's job is to keep you healthy by fighting harmful pathogens.",
                      "1.apply calamine",
                      "2.cover area with bandage",
@@ -50,7 +56,8 @@
          },
          {
           "tag":"Arthritis",
-          "Responce":[
+          "patterns" : ["Give me some info about arthritis","Give me some information on  arthritis"],
+          "response":[
                      "Arthritis is the swelling and tenderness of one or more of your joints. The main symptoms of arthritis are joint pain and stiffness, which typically worsen with age. The most common types of arthritis are osteoarthritis and rheumatoid arthritis.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. exercise",
@@ -61,7 +68,8 @@
          },
          {
           "tag":"Bronchial Asthma",
-          "Responce":[
+          "patterns" : ["Give me some info about Bronchial Asthma","Give me some information on Bronchial Asthma"],
+          "response":[
                      "Bronchial asthma is a medical condition which causes the airway path of the lungs to swell and narrow. Due to this swelling, the air path produces excess mucus making it hard to breathe, which results in coughing, short breath, and wheezing. The disease is chronic and interferes with daily working.",
                      "1.switch to loose cloothing",
                      "2.take deep breaths",
@@ -71,7 +79,8 @@
          },
          {
           "tag":"Cervical spondylosis",
-          "Responce":[
+          "patterns" : ["Give me some info about Cervical spondylosis","Give me some information on Cervical spondylosis"],
+          "response":[
                      "Cervical spondylosis is a general term for age-related wear and tear affecting the spinal disks in your neck. As the disks dehydrate and shrink, signs of osteoarthritis develop, including bony projections along the edges of bones (bone spurs).",
                      "Very common-More than 10 million cases per year (India)",
                      "1. use heating pad or cold pack",
@@ -82,7 +91,8 @@
          },
          {
           "tag":"Chicken pox",
-          "Responce":[
+          "patterns" : ["Give me some info about Chicken pox","Give me some information on Chicken pox"],
+          "response":[
                      "Chickenpox is a highly contagious disease caused by the varicella-zoster virus (VZV). It can cause an itchy, blister-like rash. The rash first appears on the chest, back, and face, and then spreads over the entire body, causing between 250 and 500 itchy blisters.",
                      "Rare -Fewer than 1 million cases per year (India)",
                      "1. use neem in bathing ",
@@ -93,7 +103,8 @@
          },
          {
           "tag":"Chronic cholestasis",
-          "Responce":[
+          "patterns" : ["Give me some info about Chronic cholestasis","Give me some information on Chronic cholestasis"],
+          "response":[
                      "Chronic cholestatic diseases, whether occurring in infancy, childhood or adulthood, are characterized by defective bile acid transport from the liver to the intestine, which is caused by primary damage to the biliary epithelium in most cases",
                      "Common -More than 1 million cases per year (India)",
                      "1. cold baths",
@@ -104,7 +115,8 @@
          },
          {
           "tag":"Common Cold",
-          "Responce":[
+          "patterns" : ["Give me some info about common cold","Give me some information on cough and cold"],
+          "response":[
                      "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. drink papaya leaf juice",
@@ -115,7 +127,8 @@
          },
          {
           "tag":"Dengue",
-          "Responce":[
+          "patterns" : ["Give me some info about dengu","Give me some information on dengu" ],
+          "response":[
                      "an acute infectious disease caused by a flavivirus (species Dengue virus of the genus Flavivirus), transmitted by aedes mosquitoes, and characterized by headache, severe joint pain, and a rash. â€” called also breakbone fever, dengue fever.",
                      "Very rare- Fewer than 100 thousand cases per year (India)",
                      "1. drink papaya leaf juice",
@@ -126,7 +139,8 @@
          },
          {
           "tag":"Diabetes ",
-          "Responce":[
+          "patterns" : ["Give me some info about Diabetes","Give me some information on Diabetes"],
+          "response":[
                      "Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. have balanced diet",
@@ -137,7 +151,9 @@
          },
          {
           "tag":"Dimorphic hemmorhoids(piles)",
-          "Responce":[
+          "patterns" : ["Give me some info about dimorphic hemmorhoids","Give me some information on dimorphic hemmorhoids",
+        "Give me some info about piles","Give me some information on piles"],
+          "response":[
                      "Hemorrhoids, also spelled haemorrhoids, are vascular structures in the anal canal. In their ... Other names, Haemorrhoids, piles, hemorrhoidal disease .",
                      "1. avoid fatty spicy food",
                      "2. consume witch hazel",
@@ -147,7 +163,8 @@
          },
          {
           "tag":"Drug Reaction",
-          "Responce":[
+          "patterns" : ["Give me some info about drug reaction","Give me some information on drug reaction"],
+          "response":[
                      "An adverse drug reaction (ADR) is an injury caused by taking medication. ADRs may occur following a single dose or prolonged administration of a drug or result from the combination of two or more drugs.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. stop irritation",
@@ -158,7 +175,8 @@
          },
          {
           "tag":"Fungal infection",
-          "Responce":[
+          "patterns" : ["Give me some info about fungal infection","Give me some information on fungal infection"],
+          "response":[
                      "In humans, fungal infections occur when an invading fungus takes over an area of the body and is too much for the immune system to handle. Fungi can live in the air, soil, water, and plants. There are also some fungi that live naturally in the human body. Like many microbes, there are helpful fungi and harmful fungi.",
                      "Common -More than 1 million cases per year (India)",
                      "1. bath twice",
@@ -169,7 +187,8 @@
          },
          {
           "tag":"GERD",
-          "Responce":[
+          "patterns" : ["Give me some info about GERD","Give me some information on GERD"],
+          "response":[
                      "Gastroesophageal reflux disease, or GERD, is a digestive disorder that affects the lower esophageal sphincter (LES), the ring of muscle between the esophagus and stomach. Many people, including pregnant women, suffer from heartburn or acid indigestion caused by GERD.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. avoid fatty spicy food",
@@ -180,7 +199,8 @@
          },
          {
           "tag":"Gastroenteritis",
-          "Responce":[
+          "patterns" : ["Give me some info about Gasteroenteritis","Give me some information on Gasteroenteritis"],
+          "response":[
                      "In humans, fungal infections occur when an invading fungus takes over an area of the body and is too much for the immune system to handle. Fungi can live in the air, soil, water, and plants. There are also some fungi that live naturally in the human body. Like many microbes, there are helpful fungi and harmful fungi.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. stop eating solid food for while",
@@ -191,7 +211,8 @@
          },
          {
           "tag":"Heart attack",
-          "Responce":[
+          "patterns" : ["Give me some info about Heart Attack","Give me some information on Heart Attack"],
+          "response":[
                      "The death of heart muscle due to the loss of blood supply. The loss of blood supply is usually caused by a complete blockage of a coronary artery, one of the arteries that supplies blood to the heart muscle.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. call ambulance",
@@ -201,7 +222,8 @@
          },
          {
           "tag":"hepatitis A",
-          "Responce":[
+          "patterns" : ["Give me some info about hepatitis A","Give me some information on hepatitis A"],
+          "response":[
                      "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus. The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function.",
                      "Rare -Fewer than 1 million cases per year (India)",
                      "1. Consult nearest hospital ",
@@ -212,7 +234,8 @@
          },
          {
           "tag":"Hepatitis B",
-          "Responce":[
+          "patterns" : ["Give me some info about hepatitis B","Give me some information on hepatitis B"],
+          "response":[
                      "Hepatitis B is an infection of your liver. It can cause scarring of the organ, liver failure, and cancer. It can be fatal if it isn't treated. It's spread when people come in contact with the blood, open sores, or body fluids of someone who has the hepatitis B virus.",
                      "Rare -Fewer than 1 million cases per year (India)",
                      "1. consult nearest hospital",
@@ -223,7 +246,8 @@
          },
          {
           "tag":"Hepatitis C",
-          "Responce":[
+          "patterns" : ["Give me some info about hepatitis C","Give me some information on hepatitis C"],
+          "response":[
                      "Inflammation of the liver due to the hepatitis C virus (HCV), which is usually spread via blood transfusion (rare), hemodialysis, and needle sticks. The damage hepatitis C does to the liver can lead to cirrhosis and its complications as well as cancer.",
                      "Rare -Fewer than 1 million cases per year (India)",
                      "1. consult nearest hospital",
@@ -234,7 +258,8 @@
          },
          {
           "tag":"Hepatitis D",
-          "Responce":[
+          "patterns" : ["Give me some info about hepatitis D","Give me some information on hepatitis D"],
+          "response":[
                      "Hepatitis D, also known as the hepatitis delta virus, is an infection that causes the liver to become inflamed. This swelling can impair liver function and cause long-term liver problems, including liver scarring and cancer. The condition is caused by the hepatitis D virus (HDV)",
                      "Rare -Fewer than 1 million cases per year (India)",
                      "1. consult doctor",
@@ -245,7 +270,8 @@
          },
          {
           "tag":"Hepatitis E",
-          "Responce":[
+          "patterns" : ["Give me some info about hepatitis E","Give me some information on hepatitis E"],
+          "response":[
                      "A rare form of liver inflammation caused by infection with the hepatitis E virus (HEV). It is transmitted via food or drink handled by an infected person or through infected water supplies in areas where fecal matter may get into the water. Hepatitis E does not cause chronic liver disease.",
                      "Rare -Fewer than 1 million cases per year (India)",
                      "1. stop alcohol consumption",
@@ -256,7 +282,8 @@
          },
          {
           "tag":"Hypertension ",
-          "Responce":[
+          "patterns" : ["Give me some info about Hypertension","Give me some information on Hypertension"],
+          "response":[
                      "Hypertension (HTN or HT), also known as high blood pressure (HBP), is a long-term medical condition in which the blood pressure in the arteries is persistently elevated. High blood pressure typically does not cause symptoms.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. meditation",
@@ -267,7 +294,8 @@
          },
          {
           "tag":"Hyperthyroidism",
-          "Responce":[
+          "patterns" : ["Give me some info about Hyperthyroidism","Give me some information on Hyperthyroidism"],
+          "response":[
                      "Hyperthyroidism (overactive thyroid) occurs when your thyroid gland produces too much of the hormone thyroxine. Hyperthyroidism can accelerate your body's metabolism, causing unintentional weight loss and a rapid or irregular heartbeat.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. eat healthy",
@@ -278,7 +306,8 @@
          },
          {
           "tag":"Hypoglycemia",
-          "Responce":[
+          "patterns" : ["Give me some info about Hypoglycemia","Give me some information on Hypoglycemia"],
+          "response":[
                      " Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions â€” many rare â€” can cause low blood sugar in people who don't have diabetes.",
                      "1. lie down on side",
                      "2. check in pulse",
@@ -288,7 +317,8 @@
             },
             {
              "tag":"Hypothyroidism",
-             "Responce":[
+             "patterns" : ["Give me some info about Hypothyroidism","Give me some information on Hypothyroidism"],
+             "response":[
                      "Hypothyroidism, also called underactive thyroid or low thyroid, is a disorder of the endocrine system in which the thyroid gland does not produce enough thyroid hormone.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. reduce stress",
@@ -299,7 +329,8 @@
           },
           {
              "tag":"Impetigo",
-             "Responce":[
+             "patterns" : ["Give me some info about Impetigo","Give me some information on Impetigo"],
+             "response":[
                      "Impetigo (im-puh-TIE-go) is a common and highly contagious skin infection that mainly affects infants and children. Impetigo usually appears as red sores on the face, especially around a child's nose and mouth, and on hands and feet. The sores burst and develop honey-colored crusts.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. soak affected area in warm water",
@@ -311,7 +342,8 @@
           },
           {
              "tag":"Jaundice",
-             "Responce":[
+             "patterns" : ["Give me some info about Jaundice","Give me some information on Jaundice"],
+             "response":[
                      "Yellow staining of the skin and sclerae (the whites of the eyes) by abnormally high blood levels of the bile pigment bilirubin. The yellowing extends to other tissues and body fluids. Jaundice was once called the 'morbus regius' (the regal disease) in the belief that only the touch of a king could cure it",
                      "Common -More than 1 million cases per year (India)",
                      "1. consume milk thistle",
@@ -323,19 +355,21 @@
           },
           {
              "tag":"Malaria",
-             "Responce":[
+             "patterns" : ["Give me some info about Malaria","Give me some information on Malaria"],
+             "response":[
                      "An infectious disease caused by protozoan parasites from the Plasmodium family that can be transmitted by the bite of the Anopheles mosquito or by a contaminated needle or transfusion. Falciparum malaria is the most deadly type.",
                      "Rare -Fewer than 1 million cases per year (India)",
                      "1. Consult nearest hospital",
                      "2. avoid oily food",
                      "3. avoid non veg food",
-                     "4. keep mosquitos out"  
+                     "4. keep mosquitos out "  
             
                 ]
           },
           {
              "tag":"Migraine",
-             "Responce":[
+             "patterns" : ["Give me some info about Migraine","Give me some information on Migraine"],
+             "response":[
                      "A migraine can cause severe throbbing pain or a pulsing sensation, usually on one side of the head. It's often accompanied by nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so severe that it interferes with your daily activities.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. meditation",
@@ -346,7 +380,8 @@
           },
           {
              "tag":"Osteoarthristis",
-             "Responce":[
+             "patterns" : ["Give me some info about Osteoarthristis","Give me some information on Osteoarthristis"],
+             "response":[
                      "Osteoarthritis is the most common form of arthritis, affecting millions of people worldwide. It occurs when the protective cartilage that cushions the ends of your bones wears down over time.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. acetaminophen",
@@ -358,7 +393,8 @@
           },
           {
              "tag":"Paralysis (brain hemorrhage)",
-             "Responce":[
+             "patterns" : ["Give me some info about Paralysis (brain hemorrhage)","Give me some information on Paralysis (brain hemorrhage)"],
+             "response":[
                      "Intracerebral hemorrhage (ICH) is when blood suddenly bursts into brain tissue, causing damage to your brain. Symptoms usually appear suddenly during ICH. They include headache, weakness, confusion, and paralysis, particularly on one side of your body.",
                      "1. massage",
                      "2. eat healthy",
@@ -369,7 +405,8 @@
           },
           {
              "tag":"Peptic ulcer diseae",
-             "Responce":[
+             "patterns" : ["Give me some info about Peptic ulcer diseae","Give me some information on Peptic ulcer diseae"],
+             "response":[
                      "Peptic ulcer disease (PUD) is a break in the inner lining of the stomach, the first part of the small intestine, or sometimes the lower esophagus. An ulcer in the stomach is called a gastric ulcer, while one in the first part of the intestines is a duodenal ulcer.",
                      "Common -More than 1 million cases per year (India)",
                      "1. avoid fatty spicy food",
@@ -381,7 +418,8 @@
           },
           {
              "tag":"Pneumonia",
-             "Responce":[
+             "patterns" : ["Give me some info about pneumonia","Give me some information on pneumonia"],
+             "response":[
                      "Pneumonia is an infection in one or both lungs. Bacteria, viruses, and fungi cause it. The infection causes inflammation in the air sacs in your lungs, which are called alveoli. The alveoli fill with fluid or pus, making it difficult to breathe.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. consult doctor",
@@ -393,7 +431,8 @@
           },
           {
              "tag":"Psoriasis",
-             "Responce":[
+             "patterns" : ["Give me some info about Psoriasis","Give me some information on Psoriasis"],
+             "response":[
                      "Psoriasis is a common skin disorder that forms thick, red, bumpy patches covered with silvery scales. They can pop up anywhere, but most appear on the scalp, elbows, knees, and lower back. Psoriasis can't be passed from person to person. It does sometimes happen in members of the same family.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. wash hands with warm soapy water",
@@ -405,7 +444,8 @@
           },
           {
              "tag":"Tuberculosis",
-             "Responce":[
+             "patterns" : ["Give me some info about tuberculosis","Give me some information on tuberculosis"],
+             "response":[
                      "Tuberculosis (TB) is an infectious disease usually caused by Mycobacterium tuberculosis (MTB) bacteria. Tuberculosis generally affects the lungs, but can also affect other parts of the body. Most infections show no symptoms, in which case it is known as latent tuberculosis.",
                      "Common -More than 1 million cases per year (India)",
                      "1. cover mouth",
@@ -417,7 +457,8 @@
           },
           {
              "tag":"Typhoid",
-             "Responce":[
+             "patterns" : ["Give me some info about Typhoid","Give me some information on Typhoid"],
+             "response":[
                      "An acute illness characterized by fever caused by infection with the bacterium Salmonella typhi. Typhoid fever has an insidious onset, with fever, headache, constipation, malaise, chills, and muscle pain. Diarrhea is uncommon, and vomiting is not usually severe.",
                      "Very rare- Fewer than 100 thousand cases per year (India)",
                      "1. eat high calorie vegitables",
@@ -429,7 +470,8 @@
           },
           {
              "tag":"Urinary tract infection",
-             "Responce":[
+             "patterns" : ["Give me some info about ","Give me some information on Urinary tract infection"],
+             "response":[
                      "Urinary tract infection: An infection of the kidney, ureter, bladder, or urethra. Abbreviated UTI. Not everyone with a UTI has symptoms, but common symptoms include a frequent urge to urinate and pain or burning when urinating.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. drink plenty of water",
@@ -441,7 +483,8 @@
           },
           {
              "tag":"Varicose veins",
-             "Responce":[
+             "patterns" : ["Give me some info about Varicose veins","Give me some information on Varicose veins"],
+             "response":[
                      "A vein that has enlarged and twisted, often appearing as a bulging, blue blood vessel that is clearly visible through the skin. Varicose veins are most common in older adults, particularly women, and occur especially on the legs.",
                      "Very common-More than 10 million cases per year (India)",
                      "1. lie down flat and raise the leg high",
