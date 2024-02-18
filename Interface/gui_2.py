@@ -1,7 +1,5 @@
 from pathlib import Path
-from tkinter import *
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
-
+from tkinter import Tk, Canvas, Button, PhotoImage
 
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"assets_2")
@@ -11,40 +9,48 @@ def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 
 
-window = Tk()
+class GUI:
+    def __init__(self, window):
+        self.window = window
+        self.setup_ui()
 
-window.geometry("1200x700")
-window.configure(bg="#202225")
+    def setup_ui(self):
+        self.window.geometry("1200x700")
+        self.window.configure(bg="#202225")
+
+        self.canvas = Canvas(
+            self.window,
+            bg="#202225",
+            height=700,
+            width=1200,
+            bd=0,
+            highlightthickness=0,
+            relief="ridge",
+        )
+
+        self.canvas.place(x=0, y=0)
+        self.image_image_1 = PhotoImage(file=relative_to_assets("image_1.png"))
+        self.image_1 = self.canvas.create_image(45.0, 356.0, image=self.image_image_1)
+
+        self.image_image_2 = PhotoImage(file=relative_to_assets("image_2.png"))
+        self.image_2 = self.canvas.create_image(600.0, 50.0, image=self.image_image_2)
+
+        self.image_image_3 = PhotoImage(file=relative_to_assets("image_3.png"))
+        self.image_3 = self.canvas.create_image(45.0, 643.0, image=self.image_image_3)
+
+        self.image_image_4 = PhotoImage(file=relative_to_assets("image_4.png"))
+        self.image_4 = self.canvas.create_image(620.0, 240.0, image=self.image_image_4)
+
+        self.image_image_5 = PhotoImage(file=relative_to_assets("image_5.png"))
+        self.button_5 = Button(
+            image=self.image_image_5, bg="#202225", borderwidth=0, highlightthickness=0
+        )
+        self.button_5.place(x=890.0, y=250.0)
+
+        self.window.resizable(False, False)
 
 
-canvas = Canvas(
-    window,
-    bg="#202225",
-    height=700,
-    width=1200,
-    bd=0,
-    highlightthickness=0,
-    relief="ridge",
-)
-
-canvas.place(x=0, y=0)
-image_image_1 = PhotoImage(file=relative_to_assets("image_1.png"))
-image_1 = canvas.create_image(45.0, 356.0, image=image_image_1)
-
-image_image_2 = PhotoImage(file=relative_to_assets("image_2.png"))
-image_2 = canvas.create_image(600.0, 50.0, image=image_image_2)
-
-image_image_3 = PhotoImage(file=relative_to_assets("image_3.png"))
-image_3 = canvas.create_image(45.0, 643.0, image=image_image_3)
-
-image_image_4 = PhotoImage(file=relative_to_assets("image_4.png"))
-image_4 = canvas.create_image(620.0, 240.0, image=image_image_4)
-
-image_image_5 = PhotoImage(file=relative_to_assets("image_5.png"))
-button_5 = Button(
-    image=image_image_5, bg="#202225", borderwidth=0, highlightthickness=0, command=None
-)
-button_5.place(x=890.0, y=250.0)
-
-window.resizable(False, False)
-window.mainloop()
+if __name__ == "__main__":
+    window = Tk()
+    gui = GUI(window)
+    window.mainloop()
