@@ -1,19 +1,17 @@
 import random
 import json
+import numpy as np
+import pickle
 
 import torch
 
-from model import NeuralNet
-from nltk_utilis import bag_of_words, tokenize
-
-import numpy as np
-
-import pickle
+from Chatbot.model import NeuralNet
+from Chatbot.nltk_utilis import bag_of_words, tokenize
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('Text\Datasets\intents.json', 'r',encoding='utf-8') as json_data:
+with open('Interface\Chatbot\Datasets\intents.json', 'r',encoding='utf-8') as json_data:
     intents = json.load(json_data)
 
 FILE = "data.pth"
@@ -31,24 +29,24 @@ model.load_state_dict(model_state)
 model.eval()
 
 #Predicting the symptome inputed
-with open('Text\Datasets\symptomes.json', 'r') as json_data:
-    symptomes_file = json.load(json_data)
+# with open('Interface\Chatbot\Datasets\symptomes.json', 'r') as json_data:
+#     symptomes_file = json.load(json_data)
 
-symptomes = []
-for symptome in symptomes_file['intents']:
-    symptomes.append(symptome['tag'])
-print(symptomes)
+# symptomes = []
+# for symptome in symptomes_file['intents']:
+#     symptomes.append(symptome['tag'])
+# # print(symptomes)
 
-#loading the Symptom Model
-symptom_model = torch.load('symptom.pth')
+# #loading the Symptom Model
+# symptom_model = torch.load('symptom.pth')
 
-symptom_model_state = symptom_model["model_state"]
+# symptom_model_state = symptom_model["model_state"]
 
-symp_model = NeuralNet(input_size, hidden_size, output_size).to(device)
-symp_model.load_state_dict(symptom_model_state)
-symp_model.eval()
+# symp_model = NeuralNet(input_size, hidden_size, output_size).to(device)
+# symp_model.load_state_dict(symptom_model_state)
+# symp_model.eval()
 
-bot_name = "Sam"
+bot_name = "CureCrafters"
 print("Let's chat! (type 'quit' to exit)")
 while True:
     # sentence = "do you use credit cards?"
@@ -56,50 +54,48 @@ while True:
     if sentence == "quit":
         break
     
-    token = tokenize(sentence)
-    for words in token:
-        Y = bag_of_words(words, symptomes)
-        Y = Y.reshape(1, Y.shape[0])
-        Y = torch.from_numpy(Y).to(device)
+    # token = tokenize(sentence)
+    # for words in token:
+    #     Y = bag_of_words(words, symptomes)
+    #     Y = Y.reshape(1, Y.shape[0])
+    #     Y = torch.from_numpy(Y).to(device)
         
-        output = symp_model(Y)
+    #     output = symp_model(Y)
         
-        _, predicted = torch.max(output, dim=1)
+    #     _, predicted = torch.max(output, dim=1)
 
-        tag = tags[predicted.item()]
-        print(tag)
+    #     tag = tags[predicted.item()]
+    #     print(tag)
         
     # for i in tokenize(sentence):
     #     pred = symp_model(i)
-    
-
     
     sentence = tokenize(sentence)
     
     found_list = []
     
-    #Finding Symptoms in the sentence
-    for word in sentence:
-        for w in word:
-            if word in symptomes:
-                found_list.append(word)
-        else :
-            for symptome in symptomes_file['intents']:
-                if word in symptome['patterns']:
-                    found_list.append(symptome['tag'])
+    # #Finding Symptoms in the sentence
+    # for word in sentence:
+    #     for w in word:
+    #         if word in symptomes:
+    #             found_list.append(word)
+    #     else :
+    #         for symptome in symptomes_file['intents']:
+    #             if word in symptome['patterns']:
+    #                 found_list.append(symptome['tag'])
                     
  
-    print(found_list)
-    arr = np.zeros(len(symptomes))        
-    for idx,word in enumerate(found_list):
-        arr[symptomes.index(word)] = 1     
+    # print(found_list)
+    # arr = np.zeros(len(symptomes))        
+    # for idx,word in enumerate(found_list):
+    #     arr[symptomes.index(word)] = 1     
     
     with open('finalized_model.sav', 'rb') as file:
         diseas_model = pickle.load(file)
     
-    predicted_disease = diseas_model.predict([arr])
+    # predicted_disease = diseas_model.predict([arr])
     
-    print(predicted_disease)
+    # print(predicted_disease)
     
     #Making the prediction
     X = bag_of_words(sentence, all_words)
@@ -124,7 +120,7 @@ while True:
                     print(intent['responses'][i])
                 
                 #Diseases and there symptoms
-                with open('Text\Datasets\disease_symptoms.csv', 'r') as f:
+                with open('Interface\Chatbot\Datasets\disease_symptoms.csv', 'r') as f:
                     print("Symptoms: ")
                     data = f.readlines()
                     # print(data)

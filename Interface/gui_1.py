@@ -14,9 +14,12 @@ from tkinter import (
 )
 from tkinter import *
 import tkinter as tk
+
 from PIL import Image, ImageTk
+
 import speech_recognition as sr
 import OCR as OCR
+import Chatbot.chat as chat
 
 
 class GUI:

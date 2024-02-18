@@ -1,1 +1,1 @@
-class GUI:
+Chtabot
