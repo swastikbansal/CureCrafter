@@ -85,16 +85,28 @@ class GUI:
                 filetypes=[("Image files", "*.jpg *.png")]
             )
             print(filepath)
-            label = XRayPrediction.predict(filepath)
-            print(label)
 
             if filepath:
                 # Check if a file was selected
                 image = Image.open(filepath)
                 photo = ImageTk.PhotoImage(image)
+
                 self.text_widget.image_create("end", image=photo)
                 self.text_widget.insert("end", "\n")
                 self.text_widget.image.append(photo)
+
+                xray_predictor = XRayPrediction()
+                label = xray_predictor.predict(filepath)
+                print(label)
+
+                self.text_widget.tag_configure(
+                    "bold_underline", font=("Arial", 30, "bold underline")
+                )
+
+                # Inserts the label into the text widget
+                self.text_widget.insert(
+                    "end", "\n Prediction: " + label + "\n\n", "bold_underline"
+                )
 
         self.image_image_5 = PhotoImage(file=relative_to_assets("image_5.png"))
         self.button_5 = Button(
