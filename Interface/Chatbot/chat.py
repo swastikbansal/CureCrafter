@@ -5,8 +5,8 @@ import pickle
 
 import torch
 
-from Chatbot.model import NeuralNet
-from Chatbot.nltk_utilis import bag_of_words, tokenize
+from model import NeuralNet
+from nltk_utilis import bag_of_words, tokenize
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

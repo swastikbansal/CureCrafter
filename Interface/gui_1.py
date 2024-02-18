@@ -19,7 +19,7 @@ from PIL import Image, ImageTk
 
 import speech_recognition as sr
 import OCR as OCR
-import Chatbot.chat as chat
+# import Chatbot.chat as chat
 
 
 class GUI:

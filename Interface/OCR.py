@@ -40,7 +40,7 @@ def ocr(img_path):
 
         # Read CSV file with explicit encoding specification
         csv_file_path = (
-            "Text\Datasets\medicine_data.csv"  # Update with your CSV file path
+            "Interface\Chatbot\Datasets\medicine_data.csv"  # Update with your CSV file path
         )
         with open(csv_file_path, "r", encoding="utf-8") as csv_file:
             csv_reader = csv.reader(csv_file)
