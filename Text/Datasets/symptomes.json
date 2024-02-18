@@ -5,16 +5,16 @@
             "patterns": ["itchy", "pruritus", "scratchy"]
         },
         {
-            "tags":"skin_rash",
-            "patterns": ["rash", "dermatitis", "skin irritation"]
+            "tags":"skin rash",
+            "patterns": ["skin rash","rash", "dermatitis", "skin irritation"]
 
         },
         { 
-            "tags":"nodal_skin_eruptions",
-            "patterns":["skin eruptions", "nodal eruptions", "nodules on skin"]
+            "tags":"nodal skin eruptions",
+            "patterns":["nodal skin eruptions","skin eruptions", "nodal eruptions", "nodules on skin"]
         },
         {
-            "tags":"continuous_sneezing",
+            "tags":"continuous sneezing",
             "patterns": ["sneezing", "constant sneezing", "non-stop sneezing"]
         },
         {
@@ -26,11 +26,11 @@
             "patterns": ["chilly", "shivering with cold", "cold shivers"]
         },
         {
-            "tags":"joint_pain",
+            "tags":"joint pain",
             "patterns":["joint ache", "arthralgia", "pain in joints"]
         },
         {
-            "tags":"stomach_pain",
+            "tags":"stomach pain",
             "patterns": ["abdominal pain", "belly ache", "stomach ache"]
         },
         {
@@ -38,11 +38,11 @@
             "patterns": ["acid reflux", "heartburn", "sour stomach"]
         },
         {
-            "tags":"ulcers_on_tongue",
+            "tags":"ulcers on tongue",
             "patterns": ["tongue ulcers", "mouth ulcers", "oral sores"]
         },
         {
-            "tags":"muscle_wasting",
+            "tags":"muscle wasting",
             "patterns": ["muscle loss", "muscle atrophy", "muscle degeneration"]
         },
         {
@@ -62,11 +62,11 @@
             "patterns":["cephalalgia", "head pain", "migraine"]
         },
         {
-            "tags":"yellowish_skin",
+            "tags":"yellowish skin",
             "patterns":["jaundice", "icterus", "yellow skin"] 
         },
         {
-            "tags": "dark_urine",
+            "tags": "dark urine",
             "patterns":["concentrated urine", "brown urine", "discolored urine"]
         },
         {
@@ -74,15 +74,15 @@
             "patterns": ["queasiness", "upset stomach", "vomiting sensation"]
         },
         {
-            "tags":"loss_of_appetite",
+            "tags":"loss of appetite",
             "patterns": ["anorexia", "lack of appetite", "decreased hunger"] 
         },
         {
-            "tags":"pain_behind_the_eyes",
+            "tags":"pain behind the eyes",
             "patterns":["ocular pain", "eye discomfort", "retro-orbital pain"] 
         },
         {
-            "tags":"back_pain",
+            "tags":"back pain",
             "patterns": ["dorsalgia", "spinal discomfort", "lower backache"]
         },
         {
@@ -91,7 +91,7 @@
 
         },
         {
-            "tags": "abdominal_pain",
+            "tags": "abdominal pain",
             "patterns": ["stomachache", "belly pain", "abdominal discomfort"]
         },
         {
@@ -99,31 +99,31 @@
             "patterns":["loose stools", "bowel urgency", "frequent bowel movements" ]
         },
         {
-            "tags":"mild_fever",
+            "tags":"mild fever",
             "patterns": ["low-grade fever", "slight temperature elevation", "febrile"]
         },
         {
-            "tags": "yellow_urine",
+            "tags": "yellow urine",
             "patterns": ["amber urine", "gold-colored urine", "dark yellow urine"]
         },
         {
-            "tags":"yellowing_of_eyes",
+            "tags":"yellowing of eyes",
             "patterns":["icterus of sclera", "yellowed sclera", "eye jaundice"]
         },
         {
-            "tags":"acute_liver_failure",
+            "tags":"acute liver failure",
             "patterns":["fulminant hepatic failure", "rapid liver breakdown", "liver collapse"] 
         },
         {
-            "tags":"fluid_overload",
+            "tags":"fluid overload",
             "patterns": ["hypervolemia", "excessive fluid retention", "fluid congestion"]
         },
         {
-            "tags":"swelling_of_stomach",
+            "tags":"swelling of stomach",
             "patterns": ["abdominal distension", "bloating", "stomach swelling"]
         },
         {
-            "tags":"swelled_lymph_nodes",
+            "tags":"swelled lymph nodes",
             "patterns":["enlarged lymph nodes", "lymphadenopathy", "lymph gland swelling"]
         },
         {
@@ -131,7 +131,7 @@
             "patterns": ["general discomfort", "feeling unwell", "lack of well-being"]
         },
         {
-            "tags":"blurred_and_distorted_vision",
+            "tags":"blurred and distorted vision",
             "patterns":["vision impairment", "visual distortion", "fuzzy sight"] 
         },
         {
@@ -139,19 +139,19 @@
             "patterns": ["mucus", "sputum", "respiratory secretion"] 
         },
         {
-            "tags": "throat_irritation",
+            "tags": "throat irritation",
             "patterns": ["sore throat", "pharyngeal discomfort", "throat itchiness"]
         },
         {
-            "tags":"redness_of_eyes",
+            "tags":"redness of eyes",
             "patterns":["conjunctival redness", "bloodshot eyes", "eye inflammation"] 
         },
         {
-            "tags":"sinus_pressure",
+            "tags":"sinus pressure",
             "patterns":["sinus congestion", "nasal pressure", "sinus discomfort"]
         },
         {
-            "tags": "runny_nose",
+            "tags": "runny nose",
             "patterns": ["nasal discharge", "rhinorrhea", "drippy nose"]
         },
         {
@@ -159,35 +159,35 @@
             "patterns": ["nasal congestion", "blockage", "stuffiness"]
         },
         {
-            "tags": "chest_pain",
+            "tags": "chest pain",
             "patterns": ["sternalgia", "thoracic discomfort", "heartache"]
         },
         {
-            "tags": "weakness_in_limbs",
-            "patterns":["limb fatigue", "muscle weakness", "limb lethargy"] 
+            "tags": "weakness in limbs",
+            "patterns":["limb fatigue", "muscle weakness", "limb lethargy","weakness in limbs"] 
         },
         {
-            "tags":"fast_heart_rate",
+            "tags":"fast heart rate",
             "patterns":["tachycardia", "rapid heartbeat", "elevated heart rate"] 
         },
         {
-            "tags":"pain_during_bowel_movements",
+            "tags":"pain during bowel movements",
             "patterns": ["dyschezia", "discomfort during defecation", "bowel movement pain"]
         },
         {
-            "tags":"pain_in_anal_region",
+            "tags":"pain in anal region",
             "patterns": ["perianal pain", "rectal discomfort", "anal soreness"]
         },
         {
-            "tags":"bloody_stool",
+            "tags":"bloody stool",
             "patterns": ["hematochezia", "blood in stool", "rectal bleeding"]
         },
         {
-            "tags":"irritation_in_anus",
+            "tags":"irritation in anus",
             "patterns": ["anal discomfort", "rectal irritation", "anus itchiness"]
         },
         {
-            "tags":"neck_pain",
+            "tags":"neck pain",
             "patterns":  ["cervicalgia", "neck discomfort", "cervical pain"]
         },
         {
@@ -207,83 +207,83 @@
             "patterns":  ["overweight", "excessive adiposity", "morbid obesity"]
         },
         {
-            "tags":"swollen_legs",
+            "tags":"swollen legs",
             "patterns":["lower limb edema", "leg swelling", "puffy legs"] 
         },
         {
-            "tags":"swollen_blood_vessels",
+            "tags":"swollen blood vessels",
             "patterns": ["vascular swelling", "engorged vessels", "dilated veins"]
         },
         {
-            "tags":"puffy_face_and_eyes",
+            "tags":"puffy face and eyes",
             "patterns":["facial edema", "swollen face and eyes", "periorbital puffiness" ]
         },
         {
-            "tags":"enlarged_thyroid",
+            "tags":"enlarged thyroid",
             "patterns":["thyroid enlargement", "goiter", "thyromegaly" ]
         },
         {
-            "tags":"brittle_nails",
+            "tags":"brittle nails",
             "patterns": ["fragile nails", "weak nails", "easily broken nails"] 
         },
         {
-            "tags":"swollen_extremeties",
+            "tags":"swollen extremeties",
             "patterns": ["edematous extremities", "puffy limbs", "swollen limbs"]
         },
         {
-            "tags":"excessive_hunger",
+            "tags":"excessive hunger",
             "patterns":["polyphagia", "uncontrolled appetite", "ravenous hunger"] 
         },
         {
-            "tags": "extra_marital_contacts",
+            "tags": "extra marital contacts",
             "patterns": ["extramarital affairs", "infidelity", "outside relationships"]
         }, 
         {
-            "tags":"knee_pain",
+            "tags":"knee pain",
             "patterns": ["painful knees", "knee discomfort", "aching knees"]
         },
         {
-            "tags":"slurred_speech",
+            "tags":"slurred speech",
             "patterns": ["impaired speech", "unclear speech", "mumbled speech"]
         },
         {
-            "tags":"drying_and_tingling_lips",
+            "tags":"drying and tingling lips",
             "patterns": ["dry and tingling lips", "lip dryness and tingling", "lip parching and tingling"]
         },
         {
-            "tags":"slurred_speech",
+            "tags":"slurred speech",
             "patterns": ["impaired speech", "unclear speech", "mumbled speech"]
         },
         {
-            "tags":"knee_pain",
+            "tags":"knee pain",
             "patterns":["painful knees", "knee discomfort", "aching knees"] 
         },
         {
-            "tags": "hip_joint_pain",
+            "tags": "hip joint pain",
             "patterns": ["painful hip joint", "hip discomfort", "aching hips"]
         },
         {
-            "tags":"muscle_weakness",
+            "tags":"muscle weakness",
             "patterns": ["weak muscles", "muscle fatigue", "loss of muscle strength"]
         },
         {
-            "tags": "stiff_neck",
+            "tags": "stiff neck",
             "patterns": ["neck stiffness", "neck rigidity", "tight neck"]
         },
         {
-            "tags":"swelling_joints",
+            "tags":"swelling joints",
             "patterns":["joint swelling", "enlarged joints", "puffy joints"] 
         },
         {
-            "tags":"spinning_movements",
+            "tags":"spinning movements",
             "patterns":  ["dizzy spells", "rotational sensations", "whirling sensations"]
         },
         {
-            "tags":"movement_stiffness",
+            "tags":"movement stiffness",
             "patterns": ["limited mobility", "stiff movements", "restricted movement"] 
         },
         {
-            "tags": "loss_of_balance",
+            "tags": "loss of balance",
             "patterns": ["balance impairment", "unsteady balance", "instability"]
           },
           {
@@ -291,35 +291,35 @@
             "patterns": ["lack of stability", "shakiness", "wavering"]
           },
           {
-            "tags": "weakness_of_one_body_side",
+            "tags": "weakness of one body side",
             "patterns": ["hemiparesis", "one-sided weakness", "one-sided paralysis"]
           },
           {
-            "tags": "loss_of_smell",
+            "tags": "loss of smell",
             "patterns": ["anosmia", "olfactory loss", "smell impairment"]
           },
           {
-            "tags": "bladder_discomfort",
+            "tags": "bladder discomfort",
             "patterns": ["urinary discomfort", "bladder irritation", "dysuria"]
           },
           {
-            "tags": "foul_smell_of_urine",
+            "tags": "foul smell of urine",
             "patterns": ["malodorous urine", "stinky urine", "fetid urine"]
           },
           {
-            "tags": "continuous_feel_of_urine",
+            "tags": "continuous feel of urine",
             "patterns": ["constant urge to urinate", "persistent need to urinate", "never-ending sensation of urine"]
           },
           {
-            "tags": "passage_of_gases",
+            "tags": "passage of gases",
             "patterns": ["flatulence", "gas passing", "passing wind"]
           },
           {
-            "tags": "internal_itching",
+            "tags": "internal itching",
             "patterns": ["itchiness inside", "internal pruritus", "itching sensation internally"]
           },
           {
-            "tags": "toxic_look_(typhos)",
+            "tags": "toxic look (typhos)",
             "patterns": ["typhoid appearance", "ill appearance", "septic appearance"]
           },
           {
@@ -331,35 +331,35 @@
             "patterns": ["agitation", "frustration", "edginess"]
           },
           {
-            "tags": "muscle_pain",
+            "tags": "muscle pain",
             "patterns": ["myalgia", "muscular discomfort", "sore muscles"]
           },
           {
-            "tags": "altered_sensorium",
+            "tags": "altered sensorium",
             "patterns": ["change in consciousness", "altered mental state", "confused sensorium"]
           },
           {
-            "tags": "red_spots_over_body",
+            "tags": "red spots over body",
             "patterns": ["rash", "skin eruption", "skin discoloration"]
           },
           {
-            "tags": "belly_pain",
+            "tags": "belly pain",
             "patterns": ["abdominal discomfort", "stomach ache", "tummy pain"]
           },
           {
-            "tags": "abnormal_menstruation",
+            "tags": "abnormal menstruation",
             "patterns": ["irregular menstruation", "menstrual irregularity", "unusual periods"]
           },
           {
-            "tags": "dischromic_patches",
+            "tags": "dischromic patches",
             "patterns": ["skin discoloration", "patchy skin", "discolored patches"]
           },
           {
-            "tags": "watering_from_eyes",
+            "tags": "watering from eyes",
             "patterns": ["tearing", "excessive tearing", "eye discharge"]
           },
           {
-            "tags": "increased_appetite",
+            "tags": "increased appetite",
             "patterns": ["heightened appetite", "excessive hunger", "ravenousness"]
           },
           {
@@ -367,31 +367,31 @@
             "patterns": ["excessive urination", "frequent urination", "urine overproduction"]
           },
           {
-            "tags": "family_history",
+            "tags": "family history",
             "patterns": ["genetic history", "hereditary background", "family medical background"]
           },
           {
-            "tags": "mucoid_sputum",
+            "tags": "mucoid sputum",
             "patterns": ["mucus-filled sputum", "thick sputum", "gel-like phlegm"]
           },
           {
-            "tags": "rusty_sputum",
+            "tags": "rusty sputum",
             "patterns": ["sputum with rust color", "blood-tinged sputum", "reddish sputum"]
           },
           {
-            "tags": "lack_of_concentration",
+            "tags": "lack of concentration",
             "patterns": ["attention deficit", "focus issues", "cognitive impairment"]
           },
           {
-            "tags": "visual_disturbances",
+            "tags": "visual disturbances",
             "patterns": ["vision disturbances", "ocular disturbances", "sight problems"]
           },
           {
-            "tags": "receiving_blood_transfusion",
+            "tags": "receiving blood transfusion",
             "patterns": ["getting blood transfusion", "blood transfusion therapy", "blood donation"]
           },
           {
-            "tags": "receiving_unsterile_injections",
+            "tags": "receiving unsterile injections",
             "patterns": ["getting unsterile injections", "unsterile injection administration", "unsafe injections"]
           },
           {
@@ -399,23 +399,23 @@
             "patterns": ["unconsciousness", "comatose state", "deep unconscious state"]
           },
           {
-            "tags": "stomach_bleeding",
+            "tags": "stomach bleeding",
             "patterns": ["gastric bleeding", "gastrointestinal bleeding", "stomach hemorrhage"]
           },
           {
-            "tags": "distention_of_abdomen",
+            "tags": "distention of abdomen",
             "patterns": ["abdominal bloating", "abdominal swelling", "stomach distension"]
           },
           {
-            "tags": "history_of_alcohol_consumption",
+            "tags": "history of alcohol consumption",
             "patterns": ["alcohol use history", "drinking habit", "alcohol consumption record"]
           },
           {
-            "tags": "watering_from_eyes",
+            "tags": "watering from eyes",
             "patterns": ["tearing", "excessive tearing", "eye discharge"]
           },
           {
-            "tags": "increased_appetite",
+            "tags": "increased appetite",
             "patterns": ["heightened appetite", "excessive hunger", "ravenousness"]
           },
           {
@@ -423,31 +423,31 @@
             "patterns": ["excessive urination", "frequent urination", "urine overproduction"]
           },
           {
-            "tags": "family_history",
+            "tags": "family history",
             "patterns": ["genetic history", "hereditary background", "family medical background"]
           },
           {
-            "tags": "mucoid_sputum",
+            "tags": "mucoid sputum",
             "patterns": ["mucus-filled sputum", "thick sputum", "gel-like phlegm"]
           },
           {
-            "tags": "rusty_sputum",
+            "tags": "rusty sputum",
             "patterns": ["sputum with rust color", "blood-tinged sputum", "reddish sputum"]
           },
           {
-            "tags": "lack_of_concentration",
+            "tags": "lack of concentration",
             "patterns": ["attention deficit", "focus issues", "cognitive impairment"]
           },
           {
-            "tags": "visual_disturbances",
+            "tags": "visual disturbances",
             "patterns": ["vision disturbances", "ocular disturbances", "sight problems"]
           },
           {
-            "tags": "receiving_blood_transfusion",
+            "tags": "receiving blood transfusion",
             "patterns": ["getting blood transfusion", "blood transfusion therapy", "blood donation"]
           },
           {
-            "tags": "receiving_unsterile_injections",
+            "tags": "receiving unsterile injections",
             "patterns": ["getting unsterile injections", "unsterile injection administration", "unsafe injections"]
           },
           {
@@ -455,27 +455,27 @@
             "patterns": ["unconsciousness", "comatose state", "deep unconscious state"]
           },
           {
-            "tags": "stomach_bleeding",
+            "tags": "stomach bleeding",
             "patterns": ["gastric bleeding", "gastrointestinal bleeding", "stomach hemorrhage"]
           },
           {
-            "tags": "distention_of_abdomen",
+            "tags": "distention of abdomen",
             "patterns": ["abdominal bloating", "abdominal swelling", "stomach distension"]
           },
           {
-            "tags": "history_of_alcohol_consumption",
+            "tags": "history of alcohol consumption",
             "patterns": ["alcohol use history", "drinking habit", "alcohol consumption record"]
           },
           {
-            "tags": "fluid_overload",
+            "tags": "fluid overload",
             "patterns": ["excessive fluid accumulation", "fluid retention", "fluid congestion"]
           },
           {
-            "tags": "blood_in_sputum",
+            "tags": "blood in sputum",
             "patterns": ["hemoptysis", "coughing up blood", "bloody cough"]
           },
           {
-            "tags": "prominent_veins_on_calf",
+            "tags": "prominent veins on calf",
             "patterns": ["visible veins on calf", "bulging veins on calf", "prominent calf veins"]
           },
           {
@@ -483,11 +483,11 @@
             "patterns": ["heart palpitations", "fluttering heart", "rapid heartbeat sensation"]
           },
           {
-            "tags": "painful_walking",
+            "tags": "painful walking",
             "patterns": ["pain while walking", "discomfort with walking", "walking discomfort"]
           },
           {
-            "tags": "pus_filled_pimples",
+            "tags": "pus filled pimples",
             "patterns": ["pustules", "infected pimples", "pimple discharge"]
           },
           {
@@ -499,19 +499,19 @@
             "patterns": ["scaling", "flaking", "skin shedding"]
           },
           {
-            "tags": "skin_peeling",
+            "tags": "skin peeling",
             "patterns": ["epidermal shedding", "skin flaking", "skin desquamation"]
           },
           {
-            "tags": "silver_like_dusting",
+            "tags": "silver like dusting",
             "patterns": ["silvery scales", "silver-like flakes", "silver-colored dusting"]
           },
           {
-            "tags": "small_dents_in_nails",
+            "tags": "small dents in nails",
             "patterns": ["nail pitting", "nail pockmarks", "nail dimples"]
           },
           {
-            "tags": "inflammatory_nails",
+            "tags": "inflammatory nails",
             "patterns": ["nail inflammation", "swollen nails", "nail redness"]
           },
           {
@@ -519,15 +519,15 @@
             "patterns": ["vesicle", "fluid-filled sac", "skin bubble"]
           },
           {
-            "tags": "red_sore_around_nose",
+            "tags": "red sore around nose",
             "patterns": ["nasal soreness", "nose sore", "redness around nose"]
           },
           {
-            "tags": "yellow_crust_ooze",
+            "tags": "yellow crust ooze",
             "patterns": ["oozing yellow crust", "yellow crust discharge", "yellow scab discharge"]
           },
           {
-            "tags":"disease",
+            "tags"             :"disease",
             "patterns": [
                 "Fungal infection",
                 "Allergy",
