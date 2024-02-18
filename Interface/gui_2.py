@@ -52,7 +52,7 @@ class GUI:
         self.image_3 = self.canvas.create_image(45.0, 643.0, image=self.image_image_3)
 
         self.image_image_4 = PhotoImage(file=relative_to_assets("image_4.png"))
-        self.image_4 = self.canvas.create_image(620.0, 240.0, image=self.image_image_4)
+        self.image_4 = self.canvas.create_image(620.0, 280.0, image=self.image_image_4)
 
         self.text_widget = Text(
             self.window,
@@ -85,26 +85,39 @@ class GUI:
                 filetypes=[("Image files", "*.jpg *.png")]
             )
             print(filepath)
-            label = XRayPrediction.predict(filepath)
-            print(label)
 
             if filepath:
                 # Check if a file was selected
                 image = Image.open(filepath)
                 photo = ImageTk.PhotoImage(image)
+
                 self.text_widget.image_create("end", image=photo)
                 self.text_widget.insert("end", "\n")
                 self.text_widget.image.append(photo)
 
+                xray_predictor = XRayPrediction()
+                label = xray_predictor.predict(filepath)
+                print(label)
+
+                self.text_widget.tag_configure(
+                    "bold_underline", font=("Arial", 30, "bold underline")
+                )
+
+                # Inserts the label into the text widget
+                self.text_widget.insert(
+                    "end", "\n Prediction: " + label + "\n\n", "bold_underline"
+                )
+
         self.image_image_5 = PhotoImage(file=relative_to_assets("image_5.png"))
         self.button_5 = Button(
+            self.window,
             image=self.image_image_5,
-            bg="#202225",
+            bg="#2f3235",
             borderwidth=0,
             highlightthickness=0,
             command=open_file_dialog,
         )
-        self.button_5.place(x=890.0, y=250.0)
+        self.button_5.place(x=5.0, y=180.0)
 
         self.window.resizable(False, False)
 
