@@ -39,7 +39,8 @@ class CustomDataset(Dataset):
         
         self.classes = ['Atelectasis' , 'Cardiomegaly', 'Effusion', 'Infiltration' , 'Mass', 'Nodule' , 'Pneumonia' ,
             'Pneumothorax' , 'Consolidation' , 'Edema', 'Emphysema' , 'Fibrosis' ,'Pleural_Thickening','Hernia','No Finding']
-
+        self.label_idx = enumerate(self.classes,start=1)
+        
     def __len__(self):
         return len(self.data)
 
